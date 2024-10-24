@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          slides[slideIndex-1].style.display = "block";  
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+        
+    <style>
+        /* Basic Reset */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+        /* Body Styling */
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+        /* Container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+/* Sticky header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-header .logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.sticky-header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.sticky-header nav ul li {
+    margin-right: 20px;
+}
+
+.sticky-header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.sticky-header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section (for testing) */
+.hero {
+    height: 100vh;
+    background: url('your-image.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 30px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        display: none; /* Hide on mobile */
+    }
+
+    .header .nav.active ul {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #2d0066;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+}
+
+        /* Banner Section */
+        /* Banner Section */
+        .banner {
+            background: url('images/Banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: rgb(254, 254, 255);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .banner h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .banner p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .cta-btn {
+            background-color: white;
+            color: #007BFF;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Decorations Section */
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        /* Event Cards */
+        .event-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .event-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .event-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .event-card p {
+            font-size: 16px;
+        }
+
+        .view-all-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-all-btn:hover {
+            background-color: #254e79;
+        }
+
+        .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+
+    .gallery img {
+    width: 50;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+         /* Footer */
+         footer {
+            background-color: #1c344e;
+            color: blue;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+        .option-cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .option-card {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            width: 40%;
+            text-align: center;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        .option-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .option-card h3 {
+            margin: 15px 0;
+        }
+        .option-card p {
+            color: #555;
+        }
+        .btn-primary {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Modern Header -->
+<header class="sticky-header">
+    <div class="container flex">
+        <!-- Logo Section -->
+        <div class="logo">
+            <!-- Clean, Modern Logo with Golden Accent -->
+            <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
+                <span style="color: #ffd700;">CLASSY</span> EVENTS
+            </h1>
+        </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="container">
+            <h2>Decorations Gallery</h2>
+            <p>Where we change small moments into big memories.</p>
+        </div>
+    </section>
+    <!-- Decoration Options Section -->
+    <section id="decoration-options" class="decorations-section">
+        <div class="container">
+            <h2>Decorations</h2>
+            <div class="event-cards">
+                <!-- Indoor Option -->
+                <div class="event-card">
+                    <img src="images\Indoor.jpg" alt="Indoor Decoration">
+                    <h3>Indoor Decoration</h3>
+                    <p>“Home is where love resides, memories are created, 
+                        friends always belong, and laughter never ends.
+                        we create a captivating ambiance that perfectly matches your vision.”</p>
+                    <a href="indoor.html" class="btn btn-primary">Discover</a>
+                </div>
+                
+                <!-- Outdoor Option -->
+                <div class="event-card">
+                    <img src="images\outdoor.jpg" alt="Outdoor Decoration">
+                    <h3>Outdoor Decoration</h3>
+                    <p>"Embrace the sun, let the good times roll,  
+                        Nature’s stage, where laughter takes its toll.  
+                        Enhance your outdoor events with breathtaking decoration that blends seamlessly with nature"</p>
+                    <a href="outdoor.html" class="btn btn-primary">Discover</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Classy Events. All rights reserved. | Contact us on:
+                <a href="#">WhatsApp:0319-8547089</a> |
+                <a href="#">Email: classyevents93@gmail.com</a> |
+                <a href="#">Contact:0309-3299706</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
