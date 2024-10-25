@@ -19,7 +19,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-        <style>
+    <style>
      /* Basic Reset */
      * {
     margin: 0;
@@ -549,7 +549,7 @@
     <!-- Banner Section -->
     <section id="home" class="banner">
       <div class="container">
-        <h2>"Capturing Moments, Creating Memories"</h2>
+        <h2>"Capture Moments"</h2>
         <p>"Capturing your special moments with stunning, professional photography."</p>
       </div>
     </section>
@@ -597,29 +597,67 @@
         </div>
       </div>
     </section>
-    <!-- Photographer Cinematic Banner Section -->
-<section id="photographer" class="photographer-section" style="background: url('images/Our Photographer.jpg') no-repeat center center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+<!-- Photographer Cinematic Banner Section -->
+<section id="photographer" class="photographer-section" style="height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+  
+  <!-- Background Image Area -->
+  <div id="background-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; transition: background-image 1s ease-in-out;"></div>
+
+  <!-- Overlay for Dark Gradient -->
   <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));"></div>
-  <!-- Animated Text Section -->
-  <div class="container" style="position: relative; z-index: 2; text-align: center; color: white; animation: fadeIn 2s ease-in-out;">
-    <h2 style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px; animation: slideDown 1s ease-in-out;">
-      Our Lead Photographer
-    </h2>
-    <div class="photographer-content" style="max-width: 800px; margin: 0 auto;">
-      <h3 style="font-size: 3rem; margin-bottom: 1rem; animation: slideUp 1.5s ease-in-out;">
-        RAHEEM
-      </h3>
-      <p style="font-size: 1.5rem; line-height: 1.8; animation: fadeInText 2.5s ease-in-out;">
-        RAHEEM is a seasoned photographer and videographer specializing in capturing timeless moments with a touch of artistic flair. He, along with his talented team, ensures that your memories are captured in the best way possible.
-      </p>
+
+  <!-- Photographer Info Section -->
+  <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
+    <h2 style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem;">Our Lead Photographer</h2>
+    <div id="photographer-info" style="max-width: 800px; margin: 0 auto;">
+      <!-- Start with the first photographer's details -->
+      <h3 id="photographer-name" style="font-size: 3rem; margin-bottom: 1rem;"></h3>
+      <p id="photographer-description" style="font-size: 1.5rem; line-height: 1.8;"></p>
     </div>
   </div>
+  
   <!-- Subtle Motion Effect -->
-  <div class="floating-circle" style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background-color: rgba(243, 156, 18, 0.1); border-radius: 50%; animation: moveCircle 10s infinite alternate;">
-  </div>
+  <div class="floating-circle" style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background-color: rgba(243, 156, 18, 0.1); border-radius: 50%; animation: moveCircle 10s infinite alternate;"></div>
 </section>
-    
-    <!-- Contact Us Section -->
+
+<!-- JavaScript for Slideshow -->
+<script>
+  // Array of background images and photographer details
+  const photographers = [
+    { img: 'images/Photo1.jpg', name: 'MR. RAHEEM', description: 'Raheem is a seasoned photographer specializing in capturing artistic moments.' },
+    { img: 'images/Photo2.jpg', name: 'MR. HAMMAD', description: 'Hammad specializes in capturing dynamic event photography with vivid detail.' },
+    { img: 'images/photo3.jpg', name: 'MS. SAIRA', description: 'Saira brings a modern twist to classic photography with stunning visuals.' },
+    { img: 'images/photo4.jpg', name: 'MS. HIRA', description: 'Hira has a talent for capturing beautiful candid moments.' }
+  ];
+
+  let currentIndex = 0; // Start with the first slide
+
+  // Initialize the first photographer's details
+  const backgroundContainer = document.getElementById('background-container');
+  const photographerName = document.getElementById('photographer-name');
+  const photographerDescription = document.getElementById('photographer-description');
+
+  function updateSlide() {
+    // Update background image
+    backgroundContainer.style.backgroundImage = `url(${photographers[currentIndex].img})`;
+
+    // Update photographer's name and description
+    photographerName.textContent = photographers[currentIndex].name;
+    photographerDescription.textContent = photographers[currentIndex].description;
+
+    // Go to the next slide, loop back to the first slide if needed
+    currentIndex = (currentIndex + 1) % photographers.length;
+  }
+
+  // Initialize with the first photographer
+  updateSlide();
+
+  // Change the slide every 4 seconds
+  setInterval(updateSlide, 4000);
+</script>
+
+
+<!-- Contact Us Section -->
     <section id="contact">
       <div class="container">
         <h2>Contact Us</h2>
