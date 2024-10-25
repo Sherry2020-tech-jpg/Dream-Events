@@ -600,79 +600,28 @@
       </div>
     </section>
     <!-- Photographer Cinematic Banner Section -->
-<section id="photographer" class="photographer-section" style="height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
-  <div class="swiper-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide" style="background: url('images/photo1.jpg') no-repeat center center/cover; width: 100%; height: 100%;">
-        <!-- Photographer 1 Content -->
-        <div class="container" style="position: relative; z-index: 3; text-align: center; color: white; animation: fadeIn 2s ease-in-out;">
-          <h2 style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px;">Our Lead Photographer</h2>
-          <div class="photographer-content" style="max-width: 800px; margin: 0 auto;">
-            <h3 style="font-size: 3rem; margin-bottom: 1rem;">RAHEEM</h3>
-            <p style="font-size: 1.5rem; line-height: 1.8;">Raheem is a seasoned photographer specializing in capturing artistic moments.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 2 -->
-      <div class="swiper-slide" style="background: url('images/photo2.jpg') no-repeat center center/cover; width: 100%; height: 100%;">
-        <!-- Photographer 2 Content -->
-        <div class="container" style="position: relative; z-index: 3; text-align: center; color: white; animation: fadeIn 2s ease-in-out;">
-          <h2 style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px;">Our Lead Photographer</h2>
-          <div class="photographer-content" style="max-width: 800px; margin: 0 auto;">
-            <h3 style="font-size: 3rem; margin-bottom: 1rem;">HIRA</h3>
-            <p style="font-size: 1.5rem; line-height: 1.8;">Hira has a talent for capturing the essence of beautiful candid moments.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="swiper-slide" style="background: url('images/photo3.jpg') no-repeat center center/cover; width: 100%; height: 100%;">
-        <!-- Photographer 3 Content -->
-        <div class="container" style="position: relative; z-index: 3; text-align: center; color: white; animation: fadeIn 2s ease-in-out;">
-          <h2 style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px;">Our Lead Photographer</h2>
-          <div class="photographer-content" style="max-width: 800px; margin: 0 auto;">
-            <h3 style="font-size: 3rem; margin-bottom: 1rem;">SAIRA</h3>
-            <p style="font-size: 1.5rem; line-height: 1.8;">Saira brings a modern twist to classic photography with stunning visuals.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 4 -->
-      <div class="swiper-slide" style="background: url('images/photo4.jpg') no-repeat center center/cover; width: 100%; height: 100%;">
-        <!-- Photographer 4 Content -->
-        <div class="container" style="position: relative; z-index: 3; text-align: center; color: white; animation: fadeIn 2s ease-in-out;">
-          <h2 style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px;">Our Lead Photographer</h2>
-          <div class="photographer-content" style="max-width: 800px; margin: 0 auto;">
-            <h3 style="font-size: 3rem; margin-bottom: 1rem;">ZAIN</h3>
-            <p style="font-size: 1.5rem; line-height: 1.8;">Zain specializes in capturing dynamic event photography with vivid detail.</p>
-          </div>
-        </div>
-      </div>
+<section id="photographer" class="photographer-section" style="background: url('images/Our Photographer.jpg') no-repeat center center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+  <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));"></div>
+  <!-- Animated Text Section -->
+  <div class="container" style="position: relative; z-index: 2; text-align: center; color: white; animation: fadeIn 2s ease-in-out;">
+    <h2 style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px; animation: slideDown 1s ease-in-out;">
+      Our Lead Photographer
+    </h2>
+    <div class="photographer-content" style="max-width: 800px; margin: 0 auto;">
+      <h3 style="font-size: 3rem; margin-bottom: 1rem; animation: slideUp 1.5s ease-in-out;">
+        RAHEEM
+      </h3>
+      <p style="font-size: 1.5rem; line-height: 1.8; animation: fadeInText 2.5s ease-in-out;">
+        RAHEEM is a seasoned photographer and videographer specializing in capturing timeless moments with a touch of artistic flair. He, along with his talented team, ensures that your memories are captured in the best way possible.
+      </p>
     </div>
   </div>
-
-  <!-- Overlay for Dark Gradient -->
-  <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); z-index: 2;"></div>
-
   <!-- Subtle Motion Effect -->
-  <div class="floating-circle" style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background-color: rgba(243, 156, 18, 0.1); border-radius: 50%; animation: moveCircle 10s infinite alternate;"></div>
+  <div class="floating-circle" style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background-color: rgba(243, 156, 18, 0.1); border-radius: 50%; animation: moveCircle 10s infinite alternate;">
+  </div>
 </section>
-
-<!-- SwiperJS Initialization -->
-<script>
-  var swiper = new Swiper('.swiper-container', {
-    effect: 'fade',  // Smooth fade transition
-    loop: true,      // Looping the slides
-    autoplay: {
-      delay: 3000,    // Delay between slides (3 seconds)
-      disableOnInteraction: false,  // Continue autoplay after interaction
-    },
-  });
-</script>
-
- <!-- Contact Us Section -->
+    
+    <!-- Contact Us Section -->
     <section id="contact">
       <div class="container">
         <h2>Contact Us</h2>
