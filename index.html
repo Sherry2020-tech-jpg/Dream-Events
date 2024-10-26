@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -92,11 +92,15 @@
             font-size: 48px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
         .banner p {
             font-size: 18px;
             margin-bottom: 40px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
         .cta-btn {
@@ -109,11 +113,19 @@
             font-weight: 600;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
         .cta-btn:hover {
             background-color: #f0f0f0;
         }
+                /* Gradient Background */
+                section {
+            background: linear-gradient(135deg, #f7f9fc, #e3e7ef);
+            padding: 60px 0;
+        }
+
 
         /* Welcome Section */
         section {
@@ -140,17 +152,13 @@
 }
 
 .event-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .event-card:hover {
-    transform: translateY(-10px);
-}
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
 
 .event-card img {
     width: 100%;
@@ -170,21 +178,24 @@
 }
 
 .btn-primary {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #ffd700;
-    color: #1c1c3c;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+}
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+    transition: left 0.4s;
+}
+.btn-primary:hover::before {
+    left: 100%;
 }
 
-.btn-primary:hover {
-    background-color: #fff;
-    transform: translateY(-5px);
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -595,10 +606,10 @@
     </div>
 </header>
 
-<!-- Banner Section -->
-<section id="home" class="banner">
+<!-- Banner Section with Animation -->
+<section id="home" class="banner" data-aos="fade-up">
     <div class="container">
-        <h2 class="banner-title">Small Moments, Big Memories</h2>
+        <h2>Small Moments, Big Memories</h2>
         <p>We organize weddings, corporate events, concerts, and more!</p>
     </div>
 </section>
@@ -674,9 +685,9 @@
         </div>
     </section>
 <!-- How We Work Section -->
-<section id="how-it-work" class="how-we-work">
+<section id="how-it-works" class="how-we-works">
     <div class="container">
-        <h2 class="section-title">How We Work</h2>
+        <h2 class="section-title">How We Works</h2>
         <p class="section-description">We put our heart and soul into every event, creating an energetic environment filled with innovative ideas and creativity.</p>
         <div class="feature-cards">
             <div class="feature-card">
@@ -779,7 +790,35 @@
         </p>
     </div>
 </footer>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+<script>
+    // Initialize AOS for animations
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+    // Initialize Swiper for image slider with fade effect
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'fade',
+        loop: true,
+        autoplay: { delay: 3000 },
+        speed: 1000
+    });
+
+    // Function to fade in banner text on load
+    function fadeInText() {
+        document.querySelector('.banner h2').style.opacity = '1';
+        document.querySelector('.banner p').style.opacity = '1';
+    }
+
+    // Trigger fade in effect for banner text after page load
+    window.onload = fadeInText;
+</script>
 </body>
 </html>
 
