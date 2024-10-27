@@ -59,53 +59,55 @@
             letter-spacing: 2px;
         }
 
-/* Desktop Navbar Styles */
-nav ul { 
+/* Base styles for navigation */
+nav {
+    background-color: #fff; /* White background for navigation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 10px 20px; /* Padding around the nav */
+}
+
+nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center align items */
-    padding: 0;
-    margin: 0;
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+    max-width: 1000px; /* Set a maximum width for the nav items */
+    margin: 0 auto; /* Center the navigation */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 10px; /* Spacing between items */
 }
 
 nav ul li a {
-    color: #333;
+    color: #333; /* Text color */
     text-decoration: none;
     font-weight: 600;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
+    padding: 8px 15px; /* Padding for each link */
+    border-radius: 5px; /* Slight rounding for aesthetics */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 nav ul li a:hover {
-    color: #130f01;
+    background-color: #f0f0f0; /* Light background on hover */
 }
 
-/* Responsive Mobile Navbar Adjustments */
+/* Responsive Navbar Adjustments */
 @media (max-width: 768px) {
     nav ul {
-        display: flex;
-        justify-content: space-around; /* Distributes space evenly */
-        align-items: center;
-        width: 100%; /* Take full width of mobile view */
-        padding: 0;
-        margin: 0;
+        flex-direction: row; /* Keep items in a row on mobile */
+        justify-content: center; /* Center items horizontally */
+        padding: 0; /* Remove padding for a clean look */
     }
 
     nav ul li {
-        margin: 0; /* Remove margin for equal spacing */
-        flex: 1; /* Ensure all items take equal space */
-        text-align: center;
-    }
-
-    nav ul li a {
-        padding: 10px 0; /* Adjust padding for fit */
-        font-size: 16px; /* Slightly smaller font for mobile */
+        margin: 5px 10px; /* Spacing for mobile */
     }
 }
+
+
+
 
         /* Authentication Buttons (Optional) */
         /* .auth-buttons {
