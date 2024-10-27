@@ -1,482 +1,77 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLASSY EVENTS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * { 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Body Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
 
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+        /* Container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
 
-/* Sticky header */
-.sticky-header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        /* Sticky header */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.sticky-header .logo h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+        .sticky-header .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
 
-        /* Custom Navbar Styling */
+        /* Navbar Styling */
         .navbar-nav .nav-link {
             padding: 8px 12px;
             font-weight: 600;
+            color: #333;
         }
+        
         .navbar-toggler {
             border: none;
             outline: none;
         }
+
         .navbar-toggler:focus {
             box-shadow: none;
         }
-.sticky-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    padding: 10px;
-}
 
-.sticky-header nav ul li a:hover {
-    color: #ffd700;
-}
-
-/* Banner Section */
-.banner {
-    background: url('images/image2.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.banner h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    opacity: 1; /* Set initial opacity to make sure text is visible */
-    transition: opacity 1s ease-in-out; /* Smooth transition */
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-
-.banner p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    opacity: 1; /* Set initial opacity to make sure text is visible */
-    transition: opacity 1s ease-in-out;
-}
-
-.cta-btn {
-    background-color: white;
-    color: #007BFF;
-    padding: 15px 30px;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, opacity 1s ease-in-out;
-}
-
-.cta-btn:hover {
-    background-color: #f0f0f0;
-}
-
-/* Gradient Background */
-section {
-    background: linear-gradient(135deg, #f7f9fc, #e3e7ef);
-    padding: 60px 0;
-}
-
-/* Welcome Section */
-section {
-    text-align: center;
-}
-
-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 18px;
-    width: 70%;
-    margin: 0 auto;
-}
-
-/* Event Cards */
-.event-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.event-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.event-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.event-card h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-}
-
-.event-card p {
-    font-size: 1rem;
-    padding: 0 15px 20px;
-    color: #555;
-}
-
-.btn-primary {
-    position: relative;
-    overflow: hidden;
-    transition: color 0.4s;
-}
-
-.btn-primary::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 215, 0, 0.2), transparent);
-    transition: left 0.4s;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
-}
-
-/* Gallery Section */
-.gallery-section {
-    padding: 60px 0;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-.gallery-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.gallery-section p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-}
-
-.slider {
-    width: 80%;
-    height: 500px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.slides {
-    display: flex;
-    width: 400%;
-    height: 100%;
-    animation: slide 16s infinite;
-}
-
-.slide {
-    width: 100%;
-    transition: 0.5s;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Slide animation */
-@keyframes slide {
-    0%, 20% { margin-left: 0%; }
-    25%, 50% { margin-left: -100%; }
-    55%, 80% { margin-left: -200%; }
-    85%, 100% { margin-left: -300%; }
-}
-
-/* Navigation Buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-}
-
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
-
-/* How It Works Section */
-.how-it-works {
-    background: linear-gradient(to bottom right, #f7f9fc, #e3e7ef);
-    padding: 50px 0;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #5b5b5b;
-}
-
-.section-description {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: #777;
-}
-
-.feature-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px; /* Added spacing between cards */
-}
-
-.feature-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    flex: 1 1 30%; /* Make the cards responsive */
-    min-width: 250px; /* Minimum width for each card */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
-}
-
-.feature-card:hover {
-    transform: translateY(-5px); /* Raise the card on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
-
-.feature-card .icon {
-    font-size: 2.5rem; /* Icon size */
-    margin-bottom: 15px; /* Space between icon and heading */
-}
-
-.feature-card h3 {
-    font-size: 1.5rem;
-    color: #5b5b5b; /* Title color */
-}
-
-.feature-card p {
-    color: #666;
-    line-height: 1.5;
-}
-
-/* Testimonials Section */
-#testimonials {
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 50px 0;
-    margin-top: 50px;
-}
-
-#testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.testimonial-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.testimonial {
-    width: 400px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial video {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.testimonial p {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-blockquote {
-    font-style: italic;
-    color: #555;
-    margin-top: 10px;
-}
-
-/* Contact Us Section Styling */
-.contact-section {
-    padding: 60px 0;
-    background: linear-gradient(135deg, #fbfbfc 0%);
-    border-radius: 10px;
-    color: #461dfc;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.contact-details h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.contact-details a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLASSY EVENTS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <style>
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Sticky header */
-.sticky-header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.sticky-header .logo h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-        /* Custom Navbar Styling */
-        .navbar-nav .nav-link {
-            padding: 8px 12px;
-            font-weight: 600;
+        /* Link Hover Effect */
+        .sticky-header nav ul li a:hover {
+            color: #ffd700;
         }
-        .navbar-toggler {
-            border: none;
-            outline: none;
-        }
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-.sticky-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    padding: 10px;
-}
 
-.sticky-header nav ul li a:hover {
-    color: #ffd700;
-}
+        /* Responsive Navbar Adjustments */
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                margin: 10px 0;
+            }
+        }
 
 /* Banner Section */
 .banner {
@@ -826,27 +421,98 @@ footer p {
 
 /* Media Queries for Responsive Layout */
 @media (max-width: 768px) {
-            .event-cards { flex-direction: column; align-items: center; }
-            .event-card { width: 100%; max-width: 500px; }
+    .event-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-card {
+        width: 100%;
+        max-width: 500px;
+    }
+    .banner h2 {
+        font-size: 36px;
+    }
+    .banner p {
+        font-size: 16px;
+    }
+    .gallery-section h2, .how-it-works .section-title {
+        font-size: 28px;
+    }
+    .gallery-section p, .how-it-works .section-description {
+        font-size: 16px;
+        width: 90%;
+    }
+    .feature-card {
+        flex: 1 1 80%;
+        max-width: none;
+    }
+    .testimonial {
+        width: 90%;
+    }
+    .contact-details {
+        flex-direction: column;
+    }
+    .contact-details h4 {
+        font-size: 1.2rem;
+    }
+    /* Responsive Gallery Images */
+    .slider {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+    .slides {
+        flex-direction: column; /* Stack images vertically on mobile */
+    }
+    .slide {
+        width: 100%;
+        height: auto; /* Adjust height to maintain image aspect ratio */
+    }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+    .sticky-header .logo h1 {
+        font-size: 1.5rem;
+    }
+    .navbar-collapse {
+        transition: all 0.5s ease;
+    }
+    .collapse.show {
+        display: block !important;
+    }
+    .banner h2 {
+        font-size: 28px;
+    }
+    .banner p {
+        font-size: 14px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .btn-primary {
+        font-size: 16px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    /* Gallery Section on Extra Small Screens */
+    .gallery-section .slider {
+        width: 100%;
+        height: 300px; /* Set a smaller height for mobile */
+    }
+    .gallery-section .slides {
+        display: flex;
+        flex-direction: column; /* Stack images */
+    }
+    .gallery-section .slide img {
+        width: 100%;
+        height: auto; /* Maintain image ratio */
+        object-fit: cover;
+    }
+}
+        /* Responsive Banner Text */
+        @media (max-width: 768px) {
             .banner h2 { font-size: 36px; }
-            .banner p { font-size: 16px; }
-            .gallery-section h2, .how-it-works .section-title { font-size: 28px; }
-            .gallery-section p, .how-it-works .section-description { font-size: 16px; width: 90%; }
-            .feature-card { flex: 1 1 80%; max-width: none; }
-            .testimonial { width: 90%; }
-            .contact-details { flex-direction: column; }
-            .contact-details h4 { font-size: 1.2rem; }
-        }
-        
-        @media (max-width: 480px) {
-            .sticky-header .logo h1 { font-size: 1.5rem; }
-            .navbar-collapse { transition: all 0.5s ease; }
-            .collapse.show { display: block !important; }
-            .banner h2 { font-size: 28px; }
-            .banner p { font-size: 14px; }
-            .section-title { font-size: 2rem; }
-            .btn-primary { font-size: 16px; }
-            footer p { font-size: 12px; }
         }
     </style>
 </head>
@@ -1100,263 +766,6 @@ footer p {
                     navbarToggler.click();
                 }
             });
-        });
-    }
-    // Trigger fade in effect for banner text after page load
-    window.onload = fadeInText;
-</script>
-</body>
-</html>
-
-}
-    </style>
-</head>
-<body>
-<!-- Responsive Header with Navbar -->
-<header class="sticky-header">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logo" href="#">
-                <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
-                    <span style="color: #ffd700;">CLASSY</span> EVENTS
-                </h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
-
-<!-- Banner Section with Animation -->
-<section id="home" class="banner" data-aos="fade-up">
-    <div class="container">
-        <h2>Small Moments, Big Memories</h2>
-        <p>We organize weddings, corporate events, concerts, and more!</p>
-    </div>
-</section>
-
-<!-- Welcome Section -->
-<section id="about" class="welcome">
-    <div class="container">
-        <h2>Welcome to Classy Events</h2>
-        <p>Prepare to immerse yourself in the realm of event planning expertise. We transform your events into extraordinary memories that last a lifetime. Let's make your celebrations truly special!</p>
-    </div>
-</section>
-
-<!-- Services Section -->
-<section id="services">
-    <div class="container">
-        <h2>Our Services</h2>
-        <div class="event-cards">
-            <div class="event-card">
-                <img src="images/stage.jpg" alt="Decorations">
-                <h3>Decorations</h3>
-                <p>Our stunning decoration services add a luxurious and elegant touch to your events. Every detail is carefully crafted to leave a lasting impression on your guests.</p>
-                <a href="decoration.html" class="btn btn-primary">See More</a>
-            </div>
-            <div class="event-card">
-                <img src="images/photo.jpg" alt="Photography & Videography">
-                <h3>Photography & Videography</h3>
-                <p>Our experienced photographers capture your moments beautifully. Every special moment with our professional team ensures that your memories are preserved in stunning detail, from candid shots to cinematic films.</p>
-                <a href="photography.html" class="btn btn-primary">See More</a>
-            </div>
-            <div class="event-card">
-                <img src="images/image5.jpg" alt="Entertainment & Catering">
-                <h3>Entertainment & Catering</h3>
-                <p>Enjoy live performances and delicious catering options. Experience vibrant live entertainment and indulge in exquisite catering options, customized to elevate your special event.</p>
-                <a href="entertaintment.html" class="btn btn-primary">See More</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-    <!-- Gallery Section --> 
-<section id="gallery" class="gallery-section">
-    <div class="container">
-        <h2>Event Gallery</h2>
-        <p>Browse through our past events and see the beautiful moments we’ve created.</p>
-        <div class="slider">
-            <div class="slides">
-                <div class="slide">
-                    <img src="images/image1.jpg" alt="Event 1">
-                </div>
-                <div class="slide">
-                    <img src="images/stage.jpg" alt="Event 2">
-                </div>
-                <div class="slide">
-                    <img src="images/photo.jpg" alt="Event 3">
-                </div>
-                <div class="slide">
-                    <img src="images/image5.jpg" alt="Event 4">
-                </div>
-            </div>
-            <!-- Navigation Buttons (Optional) -->
-            <!-- <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button> -->
-        </div>
-    </div>
-</section>
-
-                <!-- Navigation Buttons (Optional) -->
-                <!-- <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button> -->
-            </div>
-        </div>
-    </section>
-<!-- How We Work Section -->
-<section id="how-it-works" class="how-we-works">
-    <div class="container">
-        <h2 class="section-title">How We Works</h2>
-        <p class="section-description">We put our heart and soul into every event, creating an energetic environment filled with innovative ideas and creativity.</p>
-        <div class="feature-cards">
-            <div class="feature-card">
-                <div class="icon">👥</div>
-                <h3>Amazing People</h3>
-                <p>Our talented and friendly team ensures that every detail of your event is meticulously arranged.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🏆</div>
-                <h3>Best Experienced</h3>
-                <p>Highly trusted in event management, we pride ourselves on delivering satisfying results to our clients.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">💡</div>
-                <h3>Innovation Oriented</h3>
-                <p>Known for our unique approach, we avoid traditional methods and focus on creative setups for your events.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🎨</div>
-                <h3>Different Approach</h3>
-                <p>We continually provide fresh ideas to make your events attractive and engaging with the latest techniques.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">👨‍💼</div>
-                <h3>Professional Team</h3>
-                <p>Our experienced team is equipped to handle all challenges that may arise during your event.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">✅</div>
-                <h3>Quality Services</h3>
-                <p>We offer high-quality, quick, and reliable services at competitive prices in the event management industry.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Client Testimonials Section -->
-<section id="testimonials">
-    <h2>What Clients Say</h2>
-    <div class="testimonial-container">
-        <div class="testimonial">
-            <video width="400" controls>
-                <source src="videos/video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Client Name 1</p>
-            <blockquote>"This service was fantastic! Highly recommend."</blockquote>
-        </div>
-        <div class="testimonial">
-            <video width="400" controls>
-                <source src="videos/video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Client Name 2</p>
-            <blockquote>"Great experience, everything was perfectly arranged."</blockquote>
-        </div>
-        <div class="testimonial">
-            <video width="400" controls>
-                <source src="videos/video3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Client Name 3</p>
-            <blockquote>"Amazing event management. Everything was flawless!"</blockquote>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Us Section --> 
-<section id="contact" class="contact-section">
-    <div class="container text-center">
-        <h2 class="section-title">Let’s Connect!</h2>
-        <p class="section-subtitle">We’d love to hear from you. Let’s make your event unforgettable!</p>
-
-        <div class="contact-info">
-            <div class="info-card">
-                <h3>WhatsApp</h3>
-                <p><a href="https://wa.me/923198547089" target="_blank" class="contact-link">0319-8547089</a></p>
-            </div>
-            <div class="info-card">
-                <h3>Email</h3>
-                <p><a href="mailto:classyevents93@gmail.com" class="contact-link">classyevents93@gmail.com</a></p>
-            </div>
-            <div class="info-card">
-                <h3>Location</h3>
-                <p>Makli, Sindh, Pakistan</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>© 2024 Classy Events. All rights reserved. | Follow us on:
-            <a href="#">WhatsApp: 0319-8547089</a> |
-            <a href="#">Email: classyevents93@gmail.com</a> |
-            <a href="#">Contact: 0319-8547089</a>
-        </p>
-    </div>
-</footer>
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    // Initialize AOS for animations
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
-
-    // Initialize Swiper for image slider with fade effect
-    var swiper = new Swiper('.swiper-container', {
-        effect: 'fade',
-        loop: true,
-        autoplay: { delay: 3000 },
-        speed: 1000
-    });
-
-    // Function to fade in banner text on load
-    function fadeInText() {
-        document.querySelector('.banner h2').style.opacity = '1';
-        document.querySelector('.banner p').style.opacity = '1';
-            
-        // Initialize Bootstrap's collapse component and close it on link click
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            const navbarCollapse = new bootstrap.Collapse(document.getElementById('navbarNav'), {
-                toggle: false  // prevents auto toggling
-            });
-            navbarCollapse.hide(); // Manually hide the navbar
         });
     }
     // Trigger fade in effect for banner text after page load
