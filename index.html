@@ -42,15 +42,18 @@ body {
     letter-spacing: 2px;
 }
 
-.sticky-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-.sticky-header nav ul li {
-    margin-right: 20px;
-}
-
+        /* Custom Navbar Styling */
+        .navbar-nav .nav-link {
+            padding: 8px 12px;
+            font-weight: 600;
+        }
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
 .sticky-header nav ul li a {
     text-decoration: none;
     color: #333;
@@ -85,12 +88,12 @@ body {
     to { opacity: 1; }
 }
 
+
 .banner p {
     font-size: 18px;
     margin-bottom: 40px;
     opacity: 1; /* Set initial opacity to make sure text is visible */
-    transition: opacity 1s ease-in-out; /* Smooth transition */
-    animation: fadeIn 1.5s ease-in-out forwards;
+    transition: opacity 1s ease-in-out;
 }
 
 .cta-btn {
@@ -456,11 +459,22 @@ footer p {
         font-size: 1.2rem; /* Adjust contact heading size */
     }
 }
+        /* Fix navbar background in mobile */
+        @media (max-width: 991px) {
+            .navbar {
+                background-color: white; /* Ya koi aur color jo tumhe pasand ho */
+            }
 
 @media (max-width: 480px) {
     .sticky-header .logo h1 {
         font-size: 1.5rem; /* Smaller logo size */
     }
+    .navbar-collapse {
+            transition: all 0.5s ease;
+        }
+        .collapse.show {
+            display: block !important;
+        }
 
     .banner h2 {
         font-size: 28px; /* Adjust banner title size for small screens */
@@ -701,7 +715,8 @@ footer p {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
     // Initialize AOS for animations
     AOS.init({
@@ -721,8 +736,8 @@ footer p {
     function fadeInText() {
         document.querySelector('.banner h2').style.opacity = '1';
         document.querySelector('.banner p').style.opacity = '1';
-
-      // Initialize Bootstrap's collapse component and close it on link click
+            
+        // Initialize Bootstrap's collapse component and close it on link click
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             const navbarCollapse = new bootstrap.Collapse(document.getElementById('navbarNav'), {
@@ -736,4 +751,3 @@ footer p {
 </script>
 </body>
 </html>
-
