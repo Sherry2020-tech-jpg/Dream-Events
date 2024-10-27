@@ -495,90 +495,99 @@ footer p {
 /* Media Queries for Responsive Layout */
 @media (max-width: 768px) {
     .event-cards {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
     }
     .event-card {
-        width: 100%;
-        max-width: 500px;
+        width: 100%; /* Full width for mobile */
+        max-width: 500px; /* Limit max width */
+        margin-bottom: 20px; /* Space between cards */
     }
     .banner h2 {
-        font-size: 36px;
+        font-size: 36px; /* Adjust banner title size */
     }
     .banner p {
-        font-size: 16px;
+        font-size: 16px; /* Adjust banner paragraph size */
     }
     .gallery-section h2, .how-it-works .section-title {
-        font-size: 28px;
+        font-size: 28px; /* Section title size */
     }
     .gallery-section p, .how-it-works .section-description {
-        font-size: 16px;
-        width: 90%;
+        font-size: 16px; /* Paragraph font size */
+        width: 90%; /* Width adjustment */
     }
     .feature-card {
-        flex: 1 1 80%;
-        max-width: none;
+        flex: 1 1 80%; /* Adjust flex for cards */
+        max-width: none; /* Remove max width limit */
+        margin: 10px 0; /* Space between cards */
     }
     .testimonial {
-        width: 90%;
+        width: 90%; /* Adjust testimonial width */
     }
     .contact-details {
-        flex-direction: column;
+        flex-direction: column; /* Stack contact details vertically */
     }
     .contact-details h4 {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Adjust heading size */
     }
-/* Responsive Styles */
-@media (max-width: 768px) {
+
+    /* Responsive Gallery Images */
     .slider {
-        height: 300px; /* Adjust height for mobile */
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height to maintain aspect ratio */
     }
-    .slide img {
-        height: 100%; /* Full height to fill the slide */
-        object-fit: cover; /* Cover the entire slide */
+    .slides {
+        flex-direction: column; /* Stack images vertically on mobile */
     }
+    .slide {
+        width: 100%; /* Full width for slides */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
 
 /* Media Query for Extra Small Screens */
 @media (max-width: 480px) {
     .sticky-header .logo h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust logo size */
     }
     .navbar-collapse {
-        transition: all 0.5s ease;
+        transition: all 0.5s ease; /* Smooth transition for navbar */
     }
     .collapse.show {
-        display: block !important;
+        display: block !important; /* Ensure navbar shows */
     }
     .banner h2 {
-        font-size: 28px;
+        font-size: 28px; /* Adjust banner title size */
     }
     .banner p {
-        font-size: 14px;
+        font-size: 14px; /* Adjust banner paragraph size */
     }
     .section-title {
-        font-size: 2rem;
+        font-size: 2rem; /* Adjust section title size */
     }
     .btn-primary {
-        font-size: 16px;
+        font-size: 16px; /* Adjust button size */
     }
     footer p {
-        font-size: 12px;
+        font-size: 12px; /* Adjust footer text size */
     }
+
     /* Gallery Section on Extra Small Screens */
     .gallery-section .slider {
-        width: 100%;
-        height: 300px; /* Set a smaller height for mobile */
+        width: 100%; /* Full width for the slider */
+        height: 300px; /* Smaller height for mobile */
     }
     .gallery-section .slides {
-        display: flex;
+        display: flex; /* Flexbox for slides */
         flex-direction: column; /* Stack images */
     }
     .gallery-section .slide img {
-        width: 100%;
-        height: auto; /* Maintain image ratio */
-        object-fit: cover;
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover for images */
     }
 }
+
         /* Responsive Banner Text */
         @media (max-width: 768px) {
             .banner h2 { font-size: 36px; }
