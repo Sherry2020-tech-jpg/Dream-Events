@@ -736,40 +736,42 @@ footer p {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Initialize AOS for animations
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
+// Initialize AOS for animations
+AOS.init({
+    duration: 1000,
+    once: true
+});
 
-    // Initialize Swiper for image slider with fade effect
-    var swiper = new Swiper('.swiper-container', {
-        effect: 'fade',
-        loop: true,
-        autoplay: { delay: 3000 },
-        speed: 1000
-    });
+// Initialize Swiper for image slider with fade effect
+var swiper = new Swiper('.swiper-container', {
+    effect: 'fade',
+    loop: true,
+    autoplay: { delay: 3000 },
+    speed: 1000
+});
 
-    // Function to fade in banner text on load
-    function fadeInText() {
-        document.querySelector('.banner h2').style.opacity = '1';
-        document.querySelector('.banner p').style.opacity = '1';
-            
-        document.addEventListener("DOMContentLoaded", function() {
-        var navbarToggler = document.querySelector('.navbar-toggler');
-        var navbarCollapse = document.querySelector('#navbarNav');
+document.addEventListener("DOMContentLoaded", function() {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarCollapse = document.querySelector('#navbarNav');
 
-        // Close the navbar collapse on link click (for mobile view)
-        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
-            navLink.addEventListener('click', function() {
-                if (window.innerWidth < 992) { // Apply only for mobile view
-                    navbarToggler.click();
-                }
-            });
+    // Close the navbar collapse on link click (for mobile view)
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+            if (window.innerWidth < 992) { // Apply only for mobile view
+                navbarToggler.click();
+            }
         });
-    }
-    // Trigger fade in effect for banner text after page load
-    window.onload = fadeInText;
+    });
+    
+    // Trigger fade-in effect for banner text after page load
+    fadeInText();
+});
+
+function fadeInText() {
+    document.querySelector('.banner h2').style.opacity = '1';
+    document.querySelector('.banner p').style.opacity = '1';
+}
 </script>
 </body>
 </html>
+
