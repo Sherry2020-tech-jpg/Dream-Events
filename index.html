@@ -112,12 +112,6 @@ nav ul li a:hover {
         font-size: 14px; /* Adjust font size for readability */
     }
 }
-
-
-
-
-
-
         /* Authentication Buttons (Optional) */
         /* .auth-buttons {
             display: flex;
@@ -534,19 +528,15 @@ footer p {
     .contact-details h4 {
         font-size: 1.2rem;
     }
-    /* Responsive Gallery Images */
+/* Responsive Styles */
+@media (max-width: 768px) {
     .slider {
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Auto height to maintain aspect ratio */
+        height: 300px; /* Adjust height for mobile */
     }
-    .slides {
-        flex-direction: column; /* Stack images vertically on mobile */
+    .slide img {
+        height: 100%; /* Full height to fill the slide */
+        object-fit: cover; /* Cover the entire slide */
     }
-    .slide {
-        width: 100%;
-        height: auto; /* Adjust height to maintain image aspect ratio */
-    }
-}
 
 /* Media Query for Extra Small Screens */
 @media (max-width: 480px) {
