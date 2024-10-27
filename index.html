@@ -59,7 +59,7 @@
             letter-spacing: 2px;
         }
 
-/* Base styles for navbar */
+/* Desktop Navbar Styles */
 nav ul { 
     list-style: none;
     display: flex;
@@ -73,36 +73,48 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333; /* Text color for visibility */
+    color: #333;
     text-decoration: none;
     font-weight: 600;
+    padding: 8px 12px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #130f01; /* Hover effect */
+    color: #130f01;
 }
 
-/* Responsive Navbar Adjustments */
+/* Mobile Navbar Horizontal Scroll */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack items vertically on mobile */
-        align-items: center;
-        width: 100%;
+        display: flex;
+        flex-wrap: nowrap; /* No wrapping */
+        overflow-x: auto; /* Horizontal scroll */
+        -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
+        padding: 0 10px;
     }
 
     nav ul li {
-        margin: 10px 0; /* Space between each item on mobile */
+        margin: 0 10px; /* Horizontal spacing */
     }
 
-    .navbar-collapse {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    nav ul li a {
+        padding: 10px 15px;
+        font-size: 16px; /* Slightly smaller for mobile */
+        white-space: nowrap; /* Prevent line breaks */
+    }
+
+    /* Hide scroll bar (optional) */
+    nav ul {
+        scrollbar-width: none; /* Firefox */
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
     }
 }
+
+
 
 
         /* Authentication Buttons (Optional) */
@@ -839,5 +851,4 @@ function fadeInText() {
 </script>
 </body>
 </html>
-
 
