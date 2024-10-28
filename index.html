@@ -252,57 +252,74 @@ section h2 {
 }
 
 /* Gallery Section */
-.gallery-section {
-    padding: 60px 0;
-    text-align: center;
-    background-color: #f9f9f9;
-}
+        .gallery-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
 
-.gallery-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
+        .gallery-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
 
-.gallery-section p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-}
+        .gallery-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
 
-.slider {
-    width: 80%;
-    height: 500px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
+        .slider {
+            width: 80%;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
 
-.slides {
-    display: flex;
-    width: 400%;
-    height: 100%;
-    animation: slide 16s infinite;
-}
+        .slides {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 16s infinite;
+        }
 
-.slide {
-    width: 100%;
-    transition: 0.5s;
-}
+        .slide {
+            width: 100%;
+            transition: 0.5s;
+        }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* Slide animation */
-@keyframes slide {
-    0%, 20% { margin-left: 0%; }
-    25%, 50% { margin-left: -100%; }
-    55%, 80% { margin-left: -200%; }
-    85%, 100% { margin-left: -300%; }
-}
+        /* Slide Animation */
+        @keyframes slide {
+            0%, 20% { margin-left: 0%; }
+            25%, 50% { margin-left: -100%; }
+            55%, 80% { margin-left: -200%; }
+            85%, 100% { margin-left: -300%; }
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 768px) {
+            .gallery-section h2 {
+                font-size: 24px;
+            }
+
+            .gallery-section p {
+                font-size: 16px;
+                width: 90%;
+            }
+
+            .slider {
+                width: 100%; /* Full width on mobile */
+                height: 300px; /* Adjust height for mobile */
+            }
+        }
 
 /* Navigation Buttons */
 .prev, .next {
@@ -533,14 +550,14 @@ footer p {
 
     /* Responsive Gallery Images */
     .slider {
-        width: 80%; /* Full width on mobile */
+        width: 100%; /* Full width on mobile */
         height: auto; /* Auto height to maintain aspect ratio */
     }
     .slides {
         flex-direction: column; /* Stack images vertically on mobile */
     }
     .slide {
-        width: 80%; /* Full width for slides */
+        width: 100%; /* Full width for slides */
         height: auto; /* Maintain aspect ratio */
     }
 }
@@ -574,7 +591,7 @@ footer p {
 
     /* Gallery Section on Extra Small Screens */
     .gallery-section .slider {
-        width: 80%; /* Full width for the slider */
+        width: 100%; /* Full width for the slider */
         height: 300px; /* Smaller height for mobile */
     }
     .gallery-section .slides {
@@ -582,7 +599,7 @@ footer p {
         flex-direction: column; /* Stack images */
     }
     .gallery-section .slide img {
-        width: 80%; /* Full width for images */
+        width: 100%; /* Full width for images */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover; /* Cover for images */
     }
