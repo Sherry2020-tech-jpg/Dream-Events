@@ -280,6 +280,7 @@ section h2 {
 
 .slider {
     width: 80%;
+    max-width: 1000px; /* Adjust max-width for larger screens */
     height: 500px;
     margin: 0 auto;
     position: relative;
@@ -288,13 +289,13 @@ section h2 {
 
 .slides {
     display: flex;
-    width: 400%;
+    width: 400%; /* Ensure enough width for 4 slides */
     height: 100%;
-    animation: slide 16s infinite;
+    animation: slide 16s infinite; /* Maintain the slide animation */
 }
 
 .slide {
-    width: 100%;
+    width: 100%; /* Each slide takes full width */
     transition: 0.5s;
 }
 
@@ -311,6 +312,51 @@ section h2 {
     55%, 80% { margin-left: -200%; }
     85%, 100% { margin-left: -300%; }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery-section h2 {
+        font-size: 24px; /* Smaller font for mobile */
+    }
+
+    .gallery-section p {
+        font-size: 16px; /* Smaller paragraph font */
+    }
+
+    .slider {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    .slides {
+        width: 300%; /* Adjust for 3 slides on mobile */
+    }
+    
+    @keyframes slide {
+        0%, 20% { margin-left: 0%; }
+        25%, 50% { margin-left: -100%; }
+        55%, 80% { margin-left: -200%; }
+        85%, 100% { margin-left: -300%; }
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-section h2 {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    .gallery-section p {
+        font-size: 14px; /* Further reduce paragraph font */
+    }
+
+    .slider {
+        height: 250px; /* Further reduce height for small screens */
+    }
+    
+    .slides {
+        width: 200%; /* Adjust for 2 slides on very small screens */
+    }
+}
+
 
 /* Navigation Buttons */
 .prev, .next {
