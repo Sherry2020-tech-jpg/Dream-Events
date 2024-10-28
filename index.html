@@ -279,9 +279,9 @@ section h2 {
 }
 
 .slider {
-    width: 80%;
-    max-width: 1000px; /* Adjust max-width for larger screens */
-    height: 500px;
+    width: 90%;  /* Adjusted for better mobile fitting */
+    max-width: 1200px; /* Adjusted for larger screens */
+    height: 500px; /* Height for larger screens */
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -289,20 +289,25 @@ section h2 {
 
 .slides {
     display: flex;
-    width: 400%; /* Ensure enough width for 4 slides */
+    width: 400%; /* Width for 4 slides */
     height: 100%;
     animation: slide 16s infinite; /* Maintain the slide animation */
 }
 
 .slide {
     width: 100%; /* Each slide takes full width */
-    transition: 0.5s;
+    height: 100%; /* Ensure height is full for slides */
+    display: flex;
+    justify-content: center; /* Center images */
+    align-items: center; /* Center images */
+    overflow: hidden; /* Hide overflow */
 }
 
 .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Fit the image to width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    max-height: 100%; /* Ensure the image doesn't exceed the slide height */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
 /* Slide animation */
@@ -328,14 +333,7 @@ section h2 {
     }
 
     .slides {
-        width: 300%; /* Adjust for 3 slides on mobile */
-    }
-    
-    @keyframes slide {
-        0%, 20% { margin-left: 0%; }
-        25%, 50% { margin-left: -100%; }
-        55%, 80% { margin-left: -200%; }
-        85%, 100% { margin-left: -300%; }
+        width: 300%; /* Width for 3 slides on mobile */
     }
 }
 
@@ -351,11 +349,12 @@ section h2 {
     .slider {
         height: 250px; /* Further reduce height for small screens */
     }
-    
+
     .slides {
         width: 200%; /* Adjust for 2 slides on very small screens */
     }
 }
+
 
 
 /* Navigation Buttons */
@@ -905,4 +904,5 @@ function fadeInText() {
 </script>
 </body>
 </html>
+
 
