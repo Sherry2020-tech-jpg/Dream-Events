@@ -278,10 +278,11 @@ section h2 {
     margin: 0 auto 40px auto;
 }
 
+/* Slider */
 .slider {
-    width: 90%;  /* Adjusted for better mobile fitting */
-    max-width: 1200px; /* Adjusted for larger screens */
-    height: 500px; /* Height for larger screens */
+    width: 90%;             /* Full width for mobile */
+    max-width: 1200px;       /* Max width for larger screens */
+    height: 500px;           /* Default height */
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -289,73 +290,61 @@ section h2 {
 
 .slides {
     display: flex;
-    width: 400%; /* Width for 4 slides */
-    height: 100%;
-    animation: slide 16s infinite; /* Maintain the slide animation */
+    transition: transform 1s ease;  /* Smooth transition */
+    width: 100%;              /* Adjusted for single slide view */
 }
 
 .slide {
-    width: 100%; /* Each slide takes full width */
-    height: 100%; /* Ensure height is full for slides */
+    min-width: 100%;          /* Each slide takes full width */
+    height: 100%;
     display: flex;
-    justify-content: center; /* Center images */
-    align-items: center; /* Center images */
-    overflow: hidden; /* Hide overflow */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .slide img {
-    width: 100%; /* Fit the image to width */
-    height: 100%; /* Set height to 100% */
-    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%;              /* Full width for responsiveness */
+    height: 100%;             /* Full height to fill slide */
+    object-fit: cover;        /* Cover to maintain aspect ratio */
 }
 
-/* Slide animation */
+/* Slide Animation - Manual Control */
 @keyframes slide {
-    0%, 20% { margin-left: 0%; }
-    25%, 50% { margin-left: -100%; }
-    55%, 80% { margin-left: -200%; }
-    85%, 100% { margin-left: -300%; }
+    0%, 20% { transform: translateX(0%); }
+    25%, 50% { transform: translateX(-100%); }
+    55%, 80% { transform: translateX(-200%); }
+    85%, 100% { transform: translateX(-300%); }
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .gallery-section h2 {
-        font-size: 24px; /* Smaller font for mobile */
+        font-size: 24px;
     }
 
     .gallery-section p {
-        font-size: 16px; /* Smaller paragraph font */
+        font-size: 16px;
     }
 
     .slider {
-        height: 300px; /* Smaller height for mobile */
-    }
-
-    .slides {
-        width: 300%; /* Width for 3 slides on mobile */
+        height: 300px;         /* Smaller height for mobile */
     }
 }
 
 @media (max-width: 480px) {
     .gallery-section h2 {
-        font-size: 20px; /* Further reduce font size */
+        font-size: 20px;
     }
 
     .gallery-section p {
-        font-size: 14px; /* Further reduce paragraph font */
+        font-size: 14px;
     }
 
     .slider {
-        height: 250px; /* Further reduce height for small screens */
-    }
-
-    .slides {
-        width: 200%; /* Adjust for 2 slides on very small screens */
+        height: 250px;
     }
 }
-
-
-
 
 /* Navigation Buttons */
 .prev, .next {
@@ -868,40 +857,52 @@ footer p {
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-// Initialize AOS for animations
-AOS.init({
-    duration: 1000,
-    once: true
-});
-
-// Initialize Swiper for image slider with fade effect
-var swiper = new Swiper('.swiper-container', {
-    effect: 'fade',
-    loop: true,
-    autoplay: { delay: 3000 },
-    speed: 1000
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    var navbarToggler = document.querySelector('.navbar-toggler');
-    var navbarCollapse = document.querySelector('#navbarNav');
-
-    // Toggle navbar on click for mobile view
-    navbarToggler.addEventListener('click', function() {
-        navbarCollapse.classList.toggle('show');
+<script> 
+    // Initialize AOS for animations
+    AOS.init({
+        duration: 1000,
+        once: true
     });
-});
-
     
-    // Trigger fade-in effect for banner text after page load
-    fadeInText();
-
-function fadeInText() {
-    document.querySelector('.banner h2').style.opacity = '1';
-    document.querySelector('.banner p').style.opacity = '1';
-}
-</script>
+    // Initialize Swiper for image slider with fade effect
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'fade',
+        loop: true,
+        autoplay: { delay: 3000 },
+        speed: 1000
+    });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('#navbarNav');
+    
+        // Toggle navbar on click for mobile view
+        navbarToggler.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+        });
+        
+        // Trigger fade-in effect for banner text after page load
+        fadeInText();
+    
+        // Set up the gallery slideshow function
+        let slideIndex = 0;
+        const slides = document.querySelector(".slides");
+    
+        function showNextSlide() {
+            slideIndex = (slideIndex + 1) % slides.childElementCount;  // Loop back to start
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+    
+        setInterval(showNextSlide, 4000); // Adjust timing as needed
+    });
+    
+    // Fade-in effect for banner text
+    function fadeInText() {
+        document.querySelector('.banner h2').style.opacity = '1';
+        document.querySelector('.banner p').style.opacity = '1';
+    }
+    </script>
+    
 </body>
 </html>
 
