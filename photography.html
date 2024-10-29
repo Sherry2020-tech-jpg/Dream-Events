@@ -39,40 +39,79 @@
             margin: 0 auto;
         }
 
-/* Sticky header */
+        /* Sticky header */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+/* Logo Styling for Classy Events */
+.sticky-header .logo h1 {
+    font-family: 'Dancing Script', cursive; /* Elegant font for sophistication */
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #5a3d92; /* Luxurious deep purple */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Deeper shadow for emphasis */
+    transition: transform 0.4s ease, color 0.4s ease; /* Smooth animations */
+}
+/* CE Initials Styling */
+.initial-c, .initial-e {
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-size: 4rem; /* Large size for prominence */
+    font-weight: 900; /* Bold */
+    color: #5a3d92; /* Deep purple */
+    position: relative; /* Positioning for overlap */
+    display: inline-block; /* Align next to each other */
+}
+
+/* Specific styling for "C" */
+.initial-c {
+    margin-right: -15px; /* Adjust overlap */
+    color: #8e44ad; /* Lighter shade */
+}
+
+/* Specific styling for "E" */
+.initial-e {
+    color: #5a3d92; /* Darker shade */
+}
+
+/* Hover effect */
+.initial-c:hover, .initial-e:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease;
+}
+
+
+/* Styling for Classy Events */
+.sticky-header .logo h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #5a3d92;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+
+
+/* Hover Effect */
+.sticky-header .logo h1:hover {
+    color: #bba2d0; /* Lightened purple for elegant glow on hover */
+    transform: scale(1.08); /* Slightly larger on hover */
+}
+
+/* Header Background and Positioning */
 .sticky-header {
     position: sticky;
     top: 0;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.sticky-header .logo h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.sticky-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-.sticky-header nav ul li {
-    margin-right: 20px;
-}
-
-.sticky-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
+    background: linear-gradient(to right, #f7f9fc, #e3e7ef); /* Soft gradient for a high-end feel */
     padding: 10px;
-}
-
-.sticky-header nav ul li a:hover {
-    color: #ffd700;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 /* Hero Section (for testing) */
@@ -421,7 +460,7 @@
         transform: scale(1);
       }
 
-      .<!-- Keyframe Animations -->
+      /* Keyframe Animations */
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -570,16 +609,15 @@
   </head>
   <body>
  <!-- Modern Header -->
-<header class="sticky-header">
-  <div class="container flex">
-      <!-- Logo Section -->
+ <header>
+  <div class="sticky-header">
       <div class="logo">
-          <!-- Clean, Modern Logo with Golden Accent -->
-          <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
-              <span style="color: #ffd700;">CLASSY</span> EVENTS
+          <h1>
+              <span class="initial-c">C</span>
+              <span class="initial-e">E</span>
+              Classy Events
           </h1>
       </div>
-    </div>
 </header>
 
 
