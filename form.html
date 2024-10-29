@@ -31,36 +31,59 @@
             scroll-behavior: smooth;
         }
 
-        /* Header Section */
-        .header {
-            width: 100%;
-            background-color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #f7f9fc, #e3e7ef);
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+}
 
-        .header h1 {
-            font-size: 2rem;
-            color: #333;
-            font-weight: 600;
-            animation: slide-in 1s ease-in-out;
-        }
+/* Logo Styling for Classy Events */
+.sticky-header .logo h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #5a3d92;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-        /* Slide-in animation for header */
-        @keyframes slide-in {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* Initials Styling (CE) */
+.initial-c, .initial-e {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Individual Initial Colors */
+.initial-c {
+    color: #8e44ad;
+    margin-right: -5px;
+}
+.initial-e {
+    color: #5a3d92;
+}
+
+/* Hover Effect for Text */
+.sticky-header .logo h1:hover,
+.initial-c:hover,
+.initial-e:hover {
+    color: #bba2d0;
+    transform: scale(1.05);
+}
+
+
+
 
         /* Banner Section */
         .banner {
@@ -325,9 +348,15 @@
 <body>
 
     <!-- Header Section -->
-    <div class="header">
-        <h1>Classy Events</h1>
+    <div class="sticky-header">
+        <div class="logo">
+            <h1>
+                <span class="initial-c">C</span><span class="initial-e">E</span> Classy Events
+            </h1>
+        </div>
     </div>
+    
+    
 
     <!-- Banner Section -->
     <div class="banner">
