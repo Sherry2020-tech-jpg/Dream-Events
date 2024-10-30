@@ -423,9 +423,10 @@ section h2 {
 
 .slides {
     display: flex;
-    width: 400%; /* Four slides total */
+    width: 400%;
     height: 100%;
     animation: slide 16s infinite;
+    transition: margin-left 0.5s ease;
 }
 
 .slide {
@@ -449,20 +450,26 @@ section h2 {
 /* Responsive Adjustments Only */
 @media (max-width: 768px) {
     .gallery-section h2 {
-        font-size: 24px; /* Slightly smaller font on mobile */
+        font-size: 24px;
     }
 
     .gallery-section p {
-        font-size: 16px; /* Slightly smaller font on mobile */
+        font-size: 16px;
     }
 
     .slider {
-        width: 100%; /* Full width on mobile */
-        height: 300px; /* Adjusted height to fit mobile screens */
+        width: 100%;
+        height: 300px;
     }
 
     .slides {
-        width: 400%; /* Keeping layout same */
+        width: 400%;
+    }
+
+    /* Adjust button sizes for mobile */
+    .prev, .next {
+        padding: 10px;
+        font-size: 16px;
     }
 }
 
@@ -488,12 +495,6 @@ section h2 {
     right: 20px;
 }
 
-@media (max-width: 768px) {
-    .prev, .next {
-        padding: 10px;
-        font-size: 16px;
-    }
-}
 
 
 /* How It Works Section */
