@@ -395,7 +395,6 @@ section h2 {
 
 
 /* Gallery Section */
-
 .gallery-section {
     padding: 60px 0;
     text-align: center;
@@ -424,7 +423,7 @@ section h2 {
 
 .slides {
     display: flex;
-    width: 400%;
+    width: 400%; /* Adjust this if you have more slides */
     height: 100%;
     animation: slide 16s infinite;
 }
@@ -463,10 +462,13 @@ section h2 {
     }
 
     .slides {
-        width: 300%;
+        width: 300%; /* Adjust this based on the number of slides for mobile */
+    }
+
+    .slide {
+        flex: 0 0 100%; /* Ensures each slide takes full width */
     }
 }
-
 
 /* Navigation Buttons */
 .prev, .next {
@@ -480,6 +482,7 @@ section h2 {
     cursor: pointer;
     font-size: 18px;
     border-radius: 50%;
+    z-index: 10; /* Ensure buttons are above other elements */
 }
 
 .prev {
@@ -489,6 +492,12 @@ section h2 {
 .next {
     right: 20px;
 }
+
+/* Hover effects for navigation buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
 
 /* How It Works Section */
 .how-it-works {
