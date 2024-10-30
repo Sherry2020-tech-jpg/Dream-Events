@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Reservation - Your Company</title>
+    <title>Event Reservation - Classy Events</title>
     <style>
         /* Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -30,11 +31,12 @@
         html {
             scroll-behavior: smooth;
         }
-
 /* Sticky Header */
 .sticky-header {
-    position: sticky;
+    position: fixed; /* Change from sticky to fixed */
     top: 0;
+    left: 0; /* Ensure it aligns with the left edge */
+    width: 100%; /* Make sure it spans the full width */
     background: linear-gradient(to right, #f7f9fc, #e3e7ef);
     padding: 10px 20px;
     z-index: 1000;
@@ -57,7 +59,8 @@
 }
 
 /* Initials Styling (CE) */
-.initial-c, .initial-e {
+.initial-c,
+.initial-e {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 800;
@@ -70,6 +73,7 @@
     color: #8e44ad;
     margin-right: -5px;
 }
+
 .initial-e {
     color: #5a3d92;
 }
@@ -81,9 +85,6 @@
     color: #bba2d0;
     transform: scale(1.05);
 }
-
-
-
 
         /* Banner Section */
         .banner {
@@ -116,9 +117,11 @@
 
         /* Floating effect for banner text */
         @keyframes float {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
@@ -159,6 +162,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -182,6 +186,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -330,17 +335,17 @@
             }
 
             input[type="text"],
+            input[type="date"],
             input[type="email"],
             input[type="tel"],
             textarea,
             select {
                 font-size: 0.9rem;
-                padding: 10px 12px;
             }
 
             button {
-                font-size: 1rem;
                 padding: 12px 15px;
+                font-size: 1rem;
             }
         }
     </style>
