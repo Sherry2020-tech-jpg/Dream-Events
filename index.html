@@ -415,7 +415,7 @@ section h2 {
 
 .slider {
     width: 80%;
-    height: 500px;
+    height: 500px; /* Keep this consistent for desktop */
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -423,7 +423,7 @@ section h2 {
 
 .slides {
     display: flex;
-    width: 400%; /* Adjust this if you have more slides */
+    width: 400%; /* Adjust based on the number of slides */
     height: 100%;
     animation: slide 16s infinite;
 }
@@ -431,6 +431,7 @@ section h2 {
 .slide {
     width: 100%;
     transition: 0.5s;
+    flex: 0 0 100%; /* Ensures full width for each slide */
 }
 
 .slide img {
@@ -450,23 +451,23 @@ section h2 {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .gallery-section h2 {
-        font-size: 24px;
+        font-size: 24px; /* Slightly smaller font */
     }
 
     .gallery-section p {
-        font-size: 16px;
+        font-size: 16px; /* Slightly smaller font */
     }
 
     .slider {
-        height: 300px;
+        height: 500px; /* Keep the same height as desktop */
     }
 
     .slides {
-        width: 300%; /* Adjust this based on the number of slides for mobile */
+        width: 400%; /* Keep consistent with number of slides */
     }
 
     .slide {
-        flex: 0 0 100%; /* Ensures each slide takes full width */
+        flex: 0 0 100%; /* Ensure each slide takes full width */
     }
 }
 
@@ -497,6 +498,7 @@ section h2 {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
 }
+
 
 
 /* How It Works Section */
