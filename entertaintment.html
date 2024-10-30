@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainemt</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+/* Basic Reset */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+        /* Sticky header */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+/* Logo Styling for Classy Events */
+.sticky-header .logo h1 {
+    font-family: 'Dancing Script', cursive; /* Elegant font for sophistication */
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #5a3d92; /* Luxurious deep purple */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Deeper shadow for emphasis */
+    transition: transform 0.4s ease, color 0.4s ease; /* Smooth animations */
+}
+/* CE Initials Styling */
+.initial-c, .initial-e {
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-size: 4rem; /* Large size for prominence */
+    font-weight: 900; /* Bold */
+    color: #5a3d92; /* Deep purple */
+    position: relative; /* Positioning for overlap */
+    display: inline-block; /* Align next to each other */
+}
+
+/* Specific styling for "C" */
+.initial-c {
+    margin-right: -15px; /* Adjust overlap */
+    color: #8e44ad; /* Lighter shade */
+}
+
+/* Specific styling for "E" */
+.initial-e {
+    color: #5a3d92; /* Darker shade */
+}
+
+/* Hover effect */
+.initial-c:hover, .initial-e:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease;
+}
+
+
+/* Styling for Classy Events */
+.sticky-header .logo h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #5a3d92;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+
+
+/* Hover Effect */
+.sticky-header .logo h1:hover {
+    color: #bba2d0; /* Lightened purple for elegant glow on hover */
+    transform: scale(1.08); /* Slightly larger on hover */
+}
+
+/* Header Background and Positioning */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #f7f9fc, #e3e7ef); /* Soft gradient for a high-end feel */
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('your-image.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+        /* Stylish Banner Section */
+        .banner {
+            background-image: url('images/Banner.jpg'); /* Replace with your banner image */
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay *//
+        }
+
+        .banner h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgb(12, 0, 0);
+            z-index: 2;
+        }
+
+/* Welcome Section */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Event Cards */
+.event-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-size: 16px;
+}
+
+.view-all-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #0056b3;
+}
+
+/* General Styles for Gallery Section */
+.gallery-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.gallery-section p {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+.food-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.food-info h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.food-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.price-tag {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* General Styles for Entertainment Section */
+.entertainment-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeInUp 1.2s ease;
+}
+
+.entertainment-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.entertainment-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.entertainment-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.entertainment-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.entertainment-content {
+    padding: 20px;
+}
+
+.entertainment-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #007bff;
+}
+
+.entertainment-item h3 {
+    font-size: 1.6rem;
+    color: #007bff;
+    margin: 15px 0 10px;
+}
+
+.entertainment-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* How It Works Section */
+#how-it-works {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#how-it-works h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+#how-it-works p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Feature Cards Layout */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .event-card {
+        width: 100%;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .entertainment-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .banner h2 {
+        font-size: 32px;
+    }
+
+    .event-card h3 {
+        font-size: 20px;
+    }
+
+    .food-info h3 {
+        font-size: 18px;
+    }
+
+    .price-tag {
+        font-size: 16px;
+    }
+
+    #how-it-works h2 {
+        font-size: 30px;
+    }
+
+    .footer h3 {
+        font-size: 20px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    </style>
+  </head>
+  <body>
+<!-- Modern Header -->
+<header>
+    <div class="sticky-header">
+        <div class="logo">
+            <h1>
+                <span class="initial-c">C</span>
+                <span class="initial-e">E</span>
+                Classy Events
+            </h1>
+        </div>
+</header>
+
+    <!-- Banner Section -->
+    <section id="home" class="banner">
+      <div class="container">
+        <h2>"Enjoyable Moments, Creating Memories"</h2>
+        <p>"Capturing your special moments with stunning, with suitable entertainment."</p>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="about" class="welcome">
+      <div class="container">
+        <h2>Welcome to Classy Events Entertainment</h2>
+        <p>
+          "At [CLASSY EVENTS], we gives entertainment and food that matter most. Whether it’s a wedding, corporate event, or private celebration,
+           our professional food makers and entertainers ensure your moments become more entertaining along with tastier food."
+        </p>
+      </div>
+    </section>
+
+<!-- Gallery of Foods Section -->
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2>Gallery of Food</h2>
+    <p>Explore stunning foods for your events.</p>
+    <div class="gallery-list">
+      <!-- Pakistani Food -->
+      <div class="gallery-item">
+        <img src="images\Pakistani food.jpg" alt="Pakistani Food" class="gallery-image" />
+        <div class="food-info">
+          <h3>Pakistani Food</h3>
+          <p>Pakistani cuisine popular tasty and spicy dishes include: Biryani, Kabab, and more.</p>
+          <div class="price-tag">Starting Price: PKR 8000</div>
+        </div>
+      </div>
+
+      <!-- Chinese Food -->
+      <div class="gallery-item">
+        <img src="images\chinese food.jpg" alt="Chinese Food" class="gallery-image" />
+        <div class="food-info">
+          <h3>Chinese Food</h3>
+          <p>Pakistani-Chinese dishes like Chicken Manchuriyan and Chili Chicken are popular. </p>
+          <div class="price-tag">Starting Price: PKR 5000</div>
+        </div>
+      </div>
+
+      <!-- Refreshment and Fast Food -->
+      <div class="gallery-item">
+        <img src="images\refreshment and fast food.jpg" alt="Refreshment & Fast Food" class="gallery-image" />
+        <div class="food-info">
+          <h3>Refreshment & Fast Food</h3>
+          <p>Quick bites like Rolls, Fries, Chae, and Samosas are perfect for casual events.</p>
+          <div class="price-tag">Starting Price: PKR 500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Entertainment Section -->
+<section id="entertainment" class="entertainment-section">
+  <div class="container">
+      <h2>Entertainment Options</h2>
+      <p>Choose from our wide range of entertainment options to make your event memorable.</p>
+      <div class="entertainment-list">
+          <!-- Entertainment Item 1 -->
+          <div class="entertainment-item">
+              <div class="entertainment-content">
+                  <img src="images/hanny.jpg" alt="Live Music Bands" class="entertainment-image" />
+                  <h3>Live Music Bands</h3>
+                  <p>Experience the rhythm of live music performed by talented bands suited for any event.</p>
+                  <span class="price">Price: PKR 18000</span>
+              </div>
+          </div>
+
+          <!-- Entertainment Item 2 -->
+          <div class="entertainment-item">
+              <div class="entertainment-content">
+                  <img src="images/DJ.jpg" alt="DJs" class="entertainment-image" />
+                  <h3>DJs</h3>
+                  <p>Our professional DJs will keep the dance floor alive with the latest hits and classic tracks.</p>
+                  <span class="price">Price: PKR 15000</span>
+              </div>
+          </div>
+
+          <!-- Entertainment Item 3 -->
+          <div class="entertainment-item">
+              <div class="entertainment-content">
+                  <img src="images/dancers.jpg" alt="Dancers" class="entertainment-image" />
+                  <h3>Dancers</h3>
+                  <p>Add flair to your event with our skilled dancers specializing in various dance styles.</p>
+                  <span class="price">Price: PKR 20000</span>
+              </div>
+          </div>
+
+          <!-- Entertainment Item 4 -->
+          <div class="entertainment-item">
+              <div class="entertainment-content">
+                  <img src="images/magician.jpg" alt="Magicians" class="entertainment-image" />
+                  <h3>Magicians</h3>
+                  <p>Surprise and amaze your guests with enchanting magic shows that captivate everyone.</p>
+                  <span class="price">Price: PKR 16000</span>
+              </div>
+          </div>
+
+          <!-- Entertainment Item 5 -->
+          <div class="entertainment-item">
+              <div class="entertainment-content">
+                  <img src="images/Camera.jpg" alt="Photography" class="entertainment-image" />
+                  <h3>Photography</h3>
+                  <p>Set up a fun photography to capture candid moments with friends and family.</p>
+                  <span class="price">Price: PKR 10000</span>
+              </div>
+          </div>
+
+          <!-- Entertainment Item 6 -->
+          <div class="entertainment-item">
+              <div class="entertainment-content">
+                  <img src="images/Comedy.jpg" alt="Stand-up Comedians" class="entertainment-image" />
+                  <h3>Stand-up Comedians</h3>
+                  <p>Make your guests laugh with our professional stand-up comedians.</p>
+                  <span class="price">Price: PKR 8000</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          For inquiries or to plan your next event, please get in touch with us:
+        </p>
+        <p>
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/923198547089" target="_blank">0319-8547089</a>
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:classyevents93@gmail.com">classyevents93@gmail.com</a>
+        </p>
+        <p><strong>Business Location:</strong> Makli, Sindh, Pakistan</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2024 Classy Events. All rights reserved. | Follow us on:
+          <a href="#">WhatsApp</a> | <a href="#">Email</a> |
+          <a href="#">Contact: 0319-8547089</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
