@@ -332,13 +332,15 @@ section h2 {
 }
 
 
-/* Event Cards */
+/* Event Cards Layout */
 #services .event-cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center; /* Center-align cards */
 }
 
+/* Event Card Styling */
 #services .event-card {
     display: flex;
     flex-direction: column;
@@ -349,24 +351,47 @@ section h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 300px;
+    transition: transform 0.3s ease;
 }
 
+#services .event-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Uniform Image Styling */
 #services .event-card img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    object-fit: cover; /* Ensures consistent image display */
 }
 
+/* Description Styling */
 #services .event-card .description {
-    height: 80px; /* Adjust as needed to ensure buttons are aligned */
+    height: 80px;
     overflow: hidden;
     margin: 10px 0;
 }
 
+/* Primary Button Styling */
 #services .btn-primary {
     margin-top: auto;
     align-self: center;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #services .event-cards {
+        flex-direction: column; /* Stack cards on mobile */
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    #services .event-card {
+        max-width: 100%; /* Full width for each card */
+    }
+}
+
 
 
 /* Gallery Section */
@@ -791,8 +816,8 @@ footer p {
         <h2>Our Services</h2>
         <div class="event-cards">
             <div class="event-card">
-                <img src="images/stage.jpg" alt="Decorations">
-                <h3>Decorations</h3>
+                <img src="images/image4.jpg" alt="Decorations">
+                <h3>Decorations Options</h3>
                 <p class="description">Our stunning decoration services add a luxurious and elegant touch to your events. Every detail is carefully crafted to leave a lasting impression on your guests.</p>
                 <a href="decoration.html" class="btn btn-primary">See More</a>
             </div>
