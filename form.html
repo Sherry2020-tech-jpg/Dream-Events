@@ -46,43 +46,61 @@ html {
     justify-content: flex-start;
 }
 
-/* Logo Styling for Classy Events */
+/* Logo Styling for Dream Events */
 .sticky-header .logo h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive; /* Elegant font for sophistication */
+    font-size: 3rem;
     font-weight: bold;
-    letter-spacing: 1px;
-    color: #5a3d92;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    margin: 0;
+    letter-spacing: 2px;
+    color: #5a3d92; /* Luxurious deep purple */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Deeper shadow for emphasis */
+    transition: transform 0.4s ease, color 0.4s ease; /* Smooth animations */
+}
+/* Combined DE Styling with Elegance */
+.initial-d, .initial-e { 
+    position: relative;
+    display: inline-block;
+    font-size: 4.5rem;
+    font-family: 'Playfair Display', serif; /* Elegant font choice */
+    font-weight: 700;
+    background: linear-gradient(135deg, #8e44ad, #b06fc3); /* Elegant gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes gradient visible */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Initials Styling (CE) */
-.initial-c,
-.initial-e {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 800;
-    display: inline-block;
-    line-height: 1;
-}
-
-.initial-c {
-    color: #8e44ad;
-    margin-right: -5px;
+/* Adjust overlap for elegance */
+.initial-d {
+    margin-right: -20px;
 }
 
 .initial-e {
-    color: #5a3d92;
+    margin-left: -6px;
 }
 
-/* Hover Effect for Text */
-.sticky-header .logo h1:hover,
-.initial-c:hover,
-.initial-e:hover {
-    color: #bba2d0;
-    transform: scale(1.05);
+/* Refined hover effect */
+.initial-d:hover, .initial-e:hover {
+    transform: scale(1.08); /* Elegant enlargement */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+
+/* Hover Effect */
+.sticky-header .logo h1:hover {
+    color: #bba2d0; /* Lightened purple for elegant glow on hover */
+    transform: scale(1.08); /* Slightly larger on hover */
+}
+
+/* Header Background and Positioning */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #f7f9fc, #e3e7ef); /* Soft gradient for a high-end feel */
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 /* Banner Section */
@@ -363,7 +381,8 @@ button:hover {
     <div class="sticky-header">
         <div class="logo">
             <h1>
-                <span class="initial-c">C</span><span class="initial-e">E</span> Classy Events
+                <span class="initial-d">D</span><span class="initial-e">E</span>
+            Dream Events
             </h1>
         </div>
     </div>
@@ -384,7 +403,7 @@ button:hover {
     <div class="form-container">
         <h2>Reserve Your Spot</h2>
         <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="fac760b0-6b9c-4aaa-8b46-8a622b382854">
+            <input type="hidden" name="access_key" value="eac16322-d23e-43d6-aee2-4c59ee7b60ab">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name">
