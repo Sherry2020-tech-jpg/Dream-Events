@@ -8,42 +8,42 @@
     <style>
         /* Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        * { 
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
 /* Sticky Header */
 .sticky-header {
-    position: fixed; /* Change from sticky to fixed */
+    position: fixed;
     top: 0;
-    left: 0; /* Ensure it aligns with the left edge */
-    width: 100%; /* Make sure it spans the full width */
+    left: 0;
+    width: 100%;
     background: linear-gradient(to right, #f7f9fc, #e3e7ef);
     padding: 10px 20px;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start;
 }
 
 /* Logo Styling for Classy Events */
@@ -68,7 +68,6 @@
     line-height: 1;
 }
 
-/* Individual Initial Colors */
 .initial-c {
     color: #8e44ad;
     margin-right: -5px;
@@ -86,269 +85,277 @@
     transform: scale(1.05);
 }
 
-        /* Banner Section */
-        .banner {
-            width: 100%;
-            height: 400px;
-            background: url('https://images.unsplash.com/photo-1626021524168-a800ae7ae356?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: 400px;
+    background: url('https://images.unsplash.com/photo-1626021524168-a800ae7ae356?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
 
-        .banner h2 {
-            font-size: 3rem;
-            font-weight: 600;
-            z-index: 1;
-            text-align: center;
-            animation: float 2s ease-in-out infinite;
-        }
+.banner h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    z-index: 1;
+    text-align: center;
+    animation: float 2s ease-in-out infinite;
+}
 
-        .banner:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+.banner:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-        /* Floating effect for banner text */
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
+/* Floating effect for banner text */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
-            50% {
-                transform: translateY(-10px);
-            }
-        }
+/* Intro Text Section */
+.intro {
+    max-width: 800px;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fade-in 1s ease-in-out;
+}
 
-        @media (max-width: 768px) {
-            .banner h2 {
-                font-size: 2.5rem;
-                padding: 0 20px;
-                line-height: 1.2;
-            }
-        }
+.intro p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
 
-        @media (max-width: 480px) {
-            .banner h2 {
-                font-size: 2rem;
-                padding: 0 15px;
-                line-height: 1.2;
-            }
-        }
+/* Fade-in animation for intro text */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-        /* Intro Text Section */
-        .intro {
-            max-width: 800px;
-            text-align: center;
-            padding: 40px 20px;
-            animation: fade-in 1s ease-in-out;
-        }
+/* Form Section */
+.form-container {
+    background: #fff;
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    animation: slide-up 1s ease-in-out;
+}
 
-        .intro p {
-            font-size: 1.2rem;
-            color: #666;
-            line-height: 1.6;
-        }
+/* Slide-up animation */
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        /* Fade-in animation for intro text */
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
+.form-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-            to {
-                opacity: 1;
-            }
-        }
+label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
 
-        /* Form Section */
-        .form-container {
-            background: #fff;
-            max-width: 800px;
-            width: 100%;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-            animation: slide-up 1s ease-in-out;
-        }
+/* Food Options Styling */
+.food-checkboxes label,
+.checkbox-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
 
-        /* Slide-up animation */
-        @keyframes slide-up {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
+.food-checkboxes label:hover,
+.checkbox-group label:hover {
+    background-color: #e0e0e0;
+}
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.sub-options {
+    margin-left: 20px;
+    display: none; /* Initially hidden */
+}
 
-        .form-container h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
+.sub-options label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
 
-        label {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #333;
-            margin-bottom: 8px;
-            display: block;
-        }
+/* Input and button styling */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
 
-        input[type="text"],
-        input[type="date"],
-        input[type="email"],
-        input[type="tel"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            font-size: 1rem;
-            background-color: #f9f9f9;
-            transition: border-color 0.3s ease, background-color 0.3s ease;
-        }
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
 
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: #007bff;
-            background-color: #fff;
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-            transition: box-shadow 0.3s ease-in-out;
-        }
+.form-group {
+    margin-bottom: 20px;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-        .row {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
+.row .form-group {
+    flex: 1;
+}
 
-        .row .form-group {
-            flex: 1;
-        }
+.option-group {
+    margin-bottom: 20px;
+}
 
-        .option-group {
-            margin-bottom: 20px;
-        }
+.option-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1rem;
+}
 
-        .option-group label {
-            display: inline-block;
-            margin-right: 15px;
-            font-size: 1rem;
-        }
+.option-group input {
+    margin-right: 10px;
+}
 
-        .option-group input {
-            margin-right: 10px;
-        }
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-        button {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
 
-        button:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
+/* Subtle name placement */
+.developed-by {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
 
-        /* New styles for subtle name placement */
-        .developed-by {
-            position: fixed;
-            bottom: 5px;
-            right: 10px;
-            font-size: 0.8rem;
-            color: #ccc;
-            transition: color 0.3s ease;
-        }
+.developed-by:hover {
+    color: #007bff;
+}
 
-        .developed-by:hover {
-            color: #007bff;
-        }
+/* Scroll animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-        /* Scroll animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .fade-in-up.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .form-group {
+        width: 100%;
+    }
+}
 
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .form-container {
-                padding: 20px;
-            }
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .form-container {
+        padding: 15px;
+    }
+    label {
+        font-size: 0.9rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        font-size: 0.9rem;
+    }
+    button {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+}
 
-            .row {
-                flex-direction: column;
-            }
-
-            .row .form-group {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-
-            .form-container {
-                padding: 15px;
-            }
-
-            label {
-                font-size: 0.9rem;
-            }
-
-            input[type="text"],
-            input[type="date"],
-            input[type="email"],
-            input[type="tel"],
-            textarea,
-            select {
-                font-size: 0.9rem;
-            }
-
-            button {
-                padding: 12px 15px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+</style>
 </head>
 <body>
 
@@ -413,40 +420,85 @@
                 <input type="text" id="type" name="type" placeholder="Enter your type">
             </div>
 
-            <!-- New Options Section -->
-            <div class="form-group">
-                <label for="food">Food Options</label>
-                <select id="food" name="food">
-                    <option value="Pakistani">Pakistani Food</option>
-                    <option value="Chinese">Chinese Food</option>
-                    <option value="Refreshment">Refreshment and Fast Food (For Parties and Birthday)</option>
-                    <option value="Choice">Food will be by our choice</option>
-                </select>
-            </div>
+<!-- Food Options with Styled Checkboxes -->
+<div class="form-group">
+    <label for="food">Food Options</label>
+    <div id="food-options" class="food-checkboxes">
+        <label>
+            <input type="checkbox" name="food" value="Pakistani" onclick="toggleSubOptions('pakistani-options')"> Pakistani Food
+        </label>
+        <div id="pakistani-options" class="sub-options">
+            <label><input type="checkbox" name="pakistani-items" value="Biryani"> Biryani</label>
+            <label><input type="checkbox" name="pakistani-items" value="Karahi"> Karahi</label>
+            <label><input type="checkbox" name="pakistani-items" value="Naan"> Naan</label>
+        </div>
 
-            <div class="form-group">
-                <label for="entertainment">Entertainment Options</label>
-                <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" name="entertainment" value="dj"> DJ
-                    </label>
-                    <label>
-                        <input type="checkbox" name="entertainment" value="Live_music_bands"> Live Music Bands
-                    </label>
-                    <label>
-                        <input type="checkbox" name="entertainment" value="dancer"> Dancers
-                    </label>
-                    <label>
-                        <input type="checkbox" name="entertainment" value="Magician"> Magician
-                    </label>
-                    <label>
-                        <input type="checkbox" name="entertainment" value="Photography"> Photography
-                    </label>
-                    <label>
-                        <input type="checkbox" name="entertainment" value="Standup_Comedians"> Standup Comedian
-                    </label>
-                </div>
-            </div>
+        <label>
+            <input type="checkbox" name="food" value="Chinese" onclick="toggleSubOptions('chinese-options')"> Chinese Food
+        </label>
+        <div id="chinese-options" class="sub-options">
+            <label><input type="checkbox" name="chinese-items" value="Fried Rice"> Fried Rice</label>
+            <label><input type="checkbox" name="chinese-items" value="Spring Rolls"> Spring Rolls</label>
+            <label><input type="checkbox" name="chinese-items" value="Manchurian"> Manchurian</label>
+        </div>
+
+        <label>
+            <input type="checkbox" name="food" value="Refreshment" onclick="toggleSubOptions('refreshment-options')"> Refreshment and Fast Food (For Parties and Birthday)
+        </label>
+        <div id="refreshment-options" class="sub-options">
+            <label><input type="checkbox" name="refreshment-items" value="Sandwiches"> Sandwiches</label>
+            <label><input type="checkbox" name="refreshment-items" value="Burgers"> Burgers</label>
+            <label><input type="checkbox" name="refreshment-items" value="Pizza"> Pizza</label>
+        </div>
+
+        <label>
+            <input type="checkbox" name="food" value="Choice" onclick="toggleSubOptions('choice-options')"> Food will be by our choice
+        </label>
+        <div id="choice-options" class="sub-options">
+            <label><input type="checkbox" name="choice-items" value="Chef's Special"> Chef's Special</label>
+            <label><input type="checkbox" name="choice-items" value="Surprise Menu"> Surprise Menu</label>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Entertainment Options with Photographer Sub-Options -->
+<div class="form-group">
+    <label for="entertainment">Entertainment Options</label>
+    <div class="checkbox-group">
+        <label>
+            <input type="checkbox" name="entertainment" value="dj"> DJ
+        </label>
+        <label>
+            <input type="checkbox" name="entertainment" value="Live_music_bands"> Live Music Bands
+        </label>
+        <label>
+            <input type="checkbox" name="entertainment" value="dancer"> Dancers
+        </label>
+        <label>
+            <input type="checkbox" name="entertainment" value="Magician"> Magician
+        </label>
+        <label>
+            <input type="checkbox" name="entertainment" value="Photography"> Photography
+        </label>
+        <label>
+            <input type="checkbox" name="entertainment" value="Standup_Comedians"> Standup Comedian
+        </label>
+
+        <!-- Photographer Option with Sub-Options -->
+        <label>
+            <input type="checkbox" name="entertainment" value="Photographer" onclick="toggleSubOptions('photographer-options')"> Photographer
+        </label>
+        <div id="photographer-options" class="sub-options">
+            <label><input type="checkbox" name="photographer-items" value="Mr. Rahim"> Mr. Rahim</label>
+            <label><input type="checkbox" name="photographer-items" value="Mr. Hammad"> Mr. Hammad</label>
+            <label><input type="checkbox" name="photographer-items" value="Ms. Saira"> Ms. Saira</label>
+            <label><input type="checkbox" name="photographer-items" value="Ms. Hira"> Ms. Hira</label>
+        </div>
+    </div>
+</div>
+
             
 
             <div class="form-group">
@@ -478,6 +530,28 @@
     <div class="developed-by">
         Developed by Abdul Rahim and Team
     </div>
+<script>
+    // Function to toggle the visibility of sub-options based on selection
+    function toggleSubOptions(id) {
+        const subOptions = document.getElementById(id);
+        subOptions.style.display = subOptions.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Restrict the number of selected main food options to a maximum of 3
+    document.querySelectorAll('input[name="food"]').forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            const checkedOptions = document.querySelectorAll('input[name="food"]:checked');
+            if (checkedOptions.length > 3) {
+                this.checked = false;
+                alert("You can select up to 3 food options only.");
+            }
+            function toggleSubOptions(id) {
+        const subOptions = document.getElementById(id);
+        subOptions.style.display = subOptions.style.display === 'block' ? 'none' : 'block';
+    }
+        });
+    });
+</script>
 
 </body>
 </html>
