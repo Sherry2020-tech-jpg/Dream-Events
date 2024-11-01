@@ -13,62 +13,87 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
         }
-
+               /* Sticky header */
+               .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 /* Logo Styling for Dream Events */
 .sticky-header .logo h1 {
-    font-family: 'Dancing Script', cursive; /* Elegant font for sophistication */
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #5a3d92; /* Luxurious deep purple */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Deeper shadow for emphasis */
-    transition: transform 0.4s ease, color 0.4s ease; /* Smooth animations */
+    font-family: 'Montserrat', sans-serif; /* Modern and clean font */
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4a2c82; /* Deep purple with a modern twist */
+    text-transform: uppercase; /* For a bold, statement look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Soft shadow for depth */
+    transition: color 0.4s ease, transform 0.4s ease;
 }
-/* Combined DE Styling with Elegance */
-.initial-d, .initial-e { 
+
+/* Elegant Accent for 'Events' */
+.logo .accent {
+    font-family: 'Pacifico', cursive; /* Artistic font for elegance */
+    font-size: 2.5rem;
+    color: #b06fc3; /* Light purple for a beautiful contrast */
+    display: block; /* Separate line for emphasis */
+    letter-spacing: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow for a refined look */
+}
+
+/* Combined DE Styling with Realistic Overlap and Elegance */
+.initial-d, .initial-e {
     position: relative;
     display: inline-block;
-    font-size: 4.5rem;
-    font-family: 'Playfair Display', serif; /* Elegant font choice */
+    font-size: 5rem; /* Increased size for emphasis */
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     background: linear-gradient(135deg, #8e44ad, #b06fc3); /* Elegant gradient */
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* Makes gradient visible */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    color: transparent; /* Reveal gradient */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35); /* Deeper shadow for realism */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Adjust overlap for elegance */
+/* Improved Overlap for DE */
 .initial-d {
-    margin-right: -20px;
+    margin-right: -22px; /* Adjusted for a smoother overlap */
+    z-index: 2; /* Brings 'D' to the front for a layered effect */
 }
 
 .initial-e {
-    margin-left: -6px;
+    margin-left: -8px; /* Overlap adjustment */
+    z-index: 1; /* 'E' slightly behind */
 }
 
-/* Refined hover effect */
+/* Refined Hover Effect */
 .initial-d:hover, .initial-e:hover {
-    transform: scale(1.08); /* Elegant enlargement */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+    transform: scale(1.1); /* More noticeable enlargement */
+    text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
-
 
 /* Hover Effect */
 .sticky-header .logo h1:hover {
-    color: #bba2d0; /* Lightened purple for elegant glow on hover */
-    transform: scale(1.08); /* Slightly larger on hover */
+    color: #a58ccb; /* Slightly lighter color on hover */
+    transform: scale(1.05); /* Gentle hover effect */
+}
+
+.logo .accent:hover {
+    color: #c89fd7; /* Subtle change on hover */
+    transform: translateY(-3px); /* Upward movement for elegance */
 }
 
 /* Header Background and Positioning */
 .sticky-header {
     position: sticky;
     top: 0;
-    background: linear-gradient(to right, #f7f9fc, #e3e7ef); /* Soft gradient for a high-end feel */
+    background: linear-gradient(to right, #f9fafb, #eceff4); /* Soft, modern gradient */
     padding: 10px;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a polished look */
 }
 
         /* Stylish Banner Section */
