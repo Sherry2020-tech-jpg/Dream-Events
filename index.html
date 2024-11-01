@@ -93,25 +93,20 @@
     text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
 
-/* Hover Effect */
+/* Hover Effect on Name */
 .sticky-header .logo h1:hover {
-    color: #a58ccb; /* Slightly lighter color on hover */
-    transform: scale(1.05); /* Gentle hover effect */
-}
-
-.logo .accent:hover {
-    color: #c89fd7; /* Subtle change on hover */
-    transform: translateY(-3px); /* Upward movement for elegance */
+    color: #bba2d0; /* Soft glow effect */
+    transform: scale(1.1); /* More pronounced hover effect */
 }
 
 /* Header Background and Positioning */
 .sticky-header {
     position: sticky;
     top: 0;
-    background: linear-gradient(to right, #f9fafb, #eceff4); /* Soft, modern gradient */
-    padding: 10px;
+    background: linear-gradient(to right, #f7f9fc, #e3e7ef); /* Soft and luxurious gradient */
+    padding: 15px; /* Added padding for a balanced look */
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a polished look */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
 }
 
 
@@ -475,13 +470,25 @@ section h2 {
     }
 
     .slider {
-        height: 300px;
+        height: 300px; /* Adjust height as necessary */
+        overflow: hidden; /* Hide overflow to maintain a banner look */
+        position: relative; /* Required for absolute positioning of slides */
     }
 
     .slides {
-        width: 300%;
+        display: flex; /* Use flexbox to align images in a row */
+        transition: transform 0.5s ease; /* Smooth transition for sliding */
+        width: 100%; /* Full width of the container */
+    }
+
+    .slide {
+        min-width: 100%; /* Each slide takes full width */
+        height: 300px; /* Ensure the height is consistent */
+        background-size: cover; /* Cover the entire slide area */
+        background-position: center; /* Center the images */
     }
 }
+
 
 
 /* Navigation Buttons */
