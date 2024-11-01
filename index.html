@@ -9,6 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+
     <style>
                /* Google Fonts */
        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&display=swap');
@@ -479,15 +485,20 @@ section h2 {
         display: flex; /* Use flexbox to align images in a row */
         transition: transform 0.5s ease; /* Smooth transition for sliding */
         width: 100%; /* Full width of the container */
+        height: 100%; /* Ensure the slides fill the slider height */
     }
 
     .slide {
         min-width: 100%; /* Each slide takes full width */
-        height: 300px; /* Ensure the height is consistent */
+        height: 300px; /* Consistent height for all slides */
         background-size: cover; /* Cover the entire slide area */
         background-position: center; /* Center the images */
+        display: flex; /* Optional: to center content if any */
+        align-items: center; /* Optional: to vertically center content */
+        justify-content: center; /* Optional: to horizontally center content */
     }
 }
+
 
 
 
@@ -1000,7 +1011,15 @@ var swiper = new Swiper('.swiper-container', {
     effect: 'fade',
     loop: true,
     autoplay: { delay: 3000 },
-    speed: 1000
+    speed: 1000,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -1012,13 +1031,14 @@ document.addEventListener("DOMContentLoaded", function() {
         navbarCollapse.classList.toggle('show');
     });
    
- // Trigger fade-in effect for banner text after page load
+    // Trigger fade-in effect for banner text after page load
     fadeInText();
 
-function fadeInText() {
-    document.querySelector('.banner h2').style.opacity = '1';
-    document.querySelector('.banner p').style.opacity = '1';
-}
+    function fadeInText() {
+        document.querySelector('.banner h2').style.opacity = '1';
+        document.querySelector('.banner p').style.opacity = '1';
+    }
+});
 </script>
 </body>
 </html>
