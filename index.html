@@ -283,27 +283,30 @@ section h2 {
 /* About Section Flex Layout */
 .about {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: flex-start;
+    max-width: 1200px; /* Restricts the section width for better layout */
+    margin: 0 auto; /* Centers the section horizontally on the page */
 }
 
-.about img {
-    width: 100%;
-    max-width: 450px; /* Adjusted for a larger display */
-    height: auto;
-    border-radius: 12px;
-    margin: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.welcome-image {
+    max-width: 35%; /* Adjust the image size to fit nicely */
+    margin-left: 20px; /* Moves the image slightly to the right */
+    border-radius: 8px; /* Adds rounded corners to the image */
 }
 
-.about img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+.description-box {
+    background-color: #f9f9f9; /* Light background color for the box */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the box */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1; /* Takes remaining space next to the image */
+    color: #666; /* Light grey color for the general text */
+    line-height: 1.6; /* Improves text readability */
+}
+
+.description-box strong {
+    color: #333; /* Darker color for important words */
+    font-weight: bold; /* Makes key words bold */
 }
 
 /* Paragraph Styling */
@@ -371,7 +374,7 @@ section h2 {
 
 /* Uniform Image Styling */
 #services .event-card img {
-    width: 100%;
+    width: 110%; /* Increase from 100% to 110% */
     height: auto;
     border-radius: 5px;
     object-fit: cover; /* Ensures consistent image display */
@@ -816,12 +819,14 @@ footer p {
 <section>
     <h2>Welcome to Our Event Management Service</h2>
     <div class="about">
-        <img src="images/Welcome.jpeg" alt="Welcome Image"> <!-- Replace with your image path -->
-        <p>
-            Welcome to Dream Events, your own event planning agency. We are here to help transform your simple event into a classy, unforgettable memory. Whether you desire a simple event or the big fat outside event. Our creative team will help you transform that. As indoor Event planner, we specialized to transform your simple precise area into a stunning environment which will reflect your style and meet your needs. We also specialize in outdoor event planning, Where we make unforgettable memories in natures most beautiful setting. Whether it's a family gathering, cooperate retreat, or any festival. Our creative team is here to listen your ideas and make it to reality. From venue selection and decor to catering and entertainment, we ensure a smooth experience for you and your respected guests. Let us take the stress of event planning for you, so you can focus on what really matters, having fun at your event.
+        <img src="images/Welcome.jpeg" alt="Welcome Image" class="welcome-image"> <!-- Replace with your image path -->
+        <p class="description-box">
+            Welcome to Dream Events, your own event planning agency. We are here to help transform your simple event into a classy, unforgettable memory. Whether you desire a simple event or the big fat outside event, our creative team will help you transform that. As <strong>indoor Event</strong> planners, we specialize in transforming your simple, precise area into a stunning environment that reflects your style and meets your needs. We also specialize in <strong>outdoor event planning</strong>, where we make unforgettable memories in nature’s most beautiful settings. Whether it's a family gathering, corporate retreat, or any festival, our creative team is here to listen to your ideas and make them a reality. From <strong>venue selection</strong> and <strong>decor</strong> to <strong>catering</strong> and <strong>entertainment</strong>, we ensure a smooth experience for you and your respected guests. Let us take the stress of event planning for you, so you can focus on what really matters—having fun at your event.
         </p>
     </div>
 </section>
+
+
 
 
 <!-- Services Section -->
@@ -980,7 +985,7 @@ footer p {
     <div class="container">
         <p>© 2024 Classy Events. All rights reserved. | Follow us on:
             <a href="https://wa.me/923198547089" target="_blank">WhatsApp: 0319-8547089</a> |
-            <a href="mailto:eventsdream65@gmail.com">Email: eventsdream65@gmail.com</a> |
+            <a href="mailto:eventsdream65@gmail.com">Email:eventsdream65@gmail.com</a> |
             <a href="tel:+923198547089">Contact: 0319-8547089</a>
         </p>
     </div>
