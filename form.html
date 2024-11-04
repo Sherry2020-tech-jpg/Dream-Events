@@ -8,325 +8,299 @@
     <style>
         /* Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-* {  
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {   
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f7f6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* Sticky Header */
-.sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to right, #f7f9fc, #e3e7ef);
-    padding: 10px 20px;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #f7f9fc, #e3e7ef);
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
 
-/* Logo Styling for Dream Events */
-.sticky-header .logo h1 {
-    font-family: 'Montserrat', sans-serif; /* Modern and clean font */
-    font-size: 3.2rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #4a2c82; /* Deep purple with a modern twist */
-    text-transform: uppercase; /* For a bold, statement look */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Soft shadow for depth */
-    transition: color 0.4s ease, transform 0.4s ease;
-}
+        .sticky-header .logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #4a2c82;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+            transition: color 0.4s ease, transform 0.4s ease;
+        }
 
-/* Elegant Accent for 'Events' */
-.logo .accent {
-    font-family: 'Pacifico', cursive; /* Artistic font for elegance */
-    font-size: 2.5rem;
-    color: #b06fc3; /* Light purple for a beautiful contrast */
-    display: block; /* Separate line for emphasis */
-    letter-spacing: normal;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow for a refined look */
-}
+        .logo .accent {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #b06fc3;
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-/* Combined DE Styling with Realistic Overlap and Elegance */
-.initial-d, .initial-e {
-    position: relative;
-    display: inline-block;
-    font-size: 5rem; /* Increased size for emphasis */
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    background: linear-gradient(135deg, #8e44ad, #b06fc3); /* Elegant gradient */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* Reveal gradient */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35); /* Deeper shadow for realism */
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+        .initial-d, .initial-e {
+            position: relative;
+            display: inline-block;
+            font-size: 5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            background: linear-gradient(135deg, #8e44ad, #b06fc3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
-/* Improved Overlap for DE */
-.initial-d {
-    margin-right: -22px; /* Adjusted for a smoother overlap */
-    z-index: 2; /* Brings 'D' to the front for a layered effect */
-}
+        .initial-d {
+            margin-right: -22px;
+            z-index: 2;
+        }
 
-.initial-e {
-    margin-left: -8px; /* Overlap adjustment */
-    z-index: 1; /* 'E' slightly behind */
-}
+        .initial-e {
+            margin-left: -8px;
+            z-index: 1;
+        }
 
-/* Refined Hover Effect */
-.initial-d:hover, .initial-e:hover {
-    transform: scale(1.1); /* More noticeable enlargement */
-    text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-}
+        .initial-d:hover, .initial-e:hover {
+            transform: scale(1.1);
+            text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
+        }
 
-/* Hover Effect */
-.sticky-header .logo h1:hover {
-    color: #a58ccb; /* Slightly lighter color on hover */
-    transform: scale(1.05); /* Gentle hover effect */
-}
+        .sticky-header .logo h1:hover {
+            color: #a58ccb;
+            transform: scale(1.05);
+        }
 
-.logo .accent:hover {
-    color: #c89fd7; /* Subtle change on hover */
-    transform: translateY(-3px); /* Upward movement for elegance */
-}
+        .logo .accent:hover {
+            color: #c89fd7;
+            transform: translateY(-3px);
+        }
 
-/* Header Background and Positioning */
-.sticky-header {
-    position: sticky;
-    top: 0;
-    background: linear-gradient(to right, #f9fafb, #eceff4); /* Soft, modern gradient */
-    padding: 10px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a polished look */
-}
+        .banner {
+            width: 100%;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1626021524168-a800ae7ae356?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
 
-/* Banner Section */
-.banner {
-    width: 100%;
-    height: 400px;
-    background: url('https://images.unsplash.com/photo-1626021524168-a800ae7ae356?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}
+        .banner h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            z-index: 1;
+            text-align: center;
+            animation: float 2s ease-in-out infinite;
+        }
 
-.banner h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    z-index: 1;
-    text-align: center;
-    animation: float 2s ease-in-out infinite;
-}
+        .banner:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-.banner:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-/* Floating effect for banner text */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
+        .intro {
+            max-width: 800px;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fade-in 1s ease-in-out;
+        }
 
-/* Intro Text Section */
-.intro {
-    max-width: 800px;
-    text-align: center;
-    padding: 40px 20px;
-    animation: fade-in 1s ease-in-out;
-}
+        .intro p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+        }
 
-.intro p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
-}
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-/* Fade-in animation for intro text */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+        .form-container {
+            background: #fff;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            animation: slide-up 1s ease-in-out;
+        }
 
-/* Form Section */
-.form-container {
-    background: #fff;
-    max-width: 800px;
-    width: 100%;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    animation: slide-up 1s ease-in-out;
-}
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-/* Slide-up animation */
-@keyframes slide-up {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .form-container h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
 
-.form-container h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
+        label {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
 
-label {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 8px;
-    display: block;
-}
+        .food-checkboxes label,
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #333;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
 
-/* Food Options Styling */
-.food-checkboxes label,
-.checkbox-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #333;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s;
-}
+        .food-checkboxes label:hover,
+        .checkbox-group label:hover {
+            background-color: #e0e0e0;
+        }
 
-.food-checkboxes label:hover,
-.checkbox-group label:hover {
-    background-color: #e0e0e0;
-}
+        .sub-options {
+            margin-left: 20px;
+            display: none;
+        }
 
-.sub-options {
-    margin-left: 20px;
-    display: none; /* Initially hidden */
-}
+        .sub-options label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #555;
+        }
 
-.sub-options label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
-    color: #555;
-}
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
 
-/* Input and button styling */
-input[type="text"],
-input[type="date"],
-input[type="email"],
-input[type="tel"],
-textarea,
-select {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #007bff;
+            background-color: #fff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            transition: box-shadow 0.3s ease-in-out;
+        }
 
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: #007bff;
-    background-color: #fff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    transition: box-shadow 0.3s ease-in-out;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.form-group {
-    margin-bottom: 20px;
-}
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-.row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
+        .row .form-group {
+            flex: 1;
+        }
 
-.row .form-group {
-    flex: 1;
-}
+        .option-group {
+            margin-bottom: 20px;
+        }
 
-.option-group {
-    margin-bottom: 20px;
-}
+        .option-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1rem;
+        }
 
-.option-group label {
-    display: inline-block;
-    margin-right: 15px;
-    font-size: 1rem;
-}
+        .option-group input {
+            margin-right: 10px;
+        }
 
-.option-group input {
-    margin-right: 10px;
-}
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
 
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-}
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2);
+        }
 
 /* Subtle name placement */
 .developed-by {
@@ -353,6 +327,7 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -456,6 +431,10 @@ button:hover {
                 <label for="location">Event Type (eg. Birthday)</label>
                 <input type="text" id="type" name="type" placeholder="Enter your type">
             </div>
+            <div class="form-group">
+                <label for="name">Total Invited Peoples</label>
+                <input type="text" id="Total Number Of" name="Invited Poeples" placeholder="Enter Total Number Of Peoples">
+            </div>
 
 <!-- Food Options with Styled Checkboxes -->
 <div class="form-group">
@@ -545,15 +524,13 @@ button:hover {
     </div>
 </div>
 
-            
-
-            <div class="form-group">
+<div class="form-group">
                 <label for="time">What time of the day?</label>
                 <select id="time" name="time">
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="sunset">Sunset</option>
-                    <option value="night">Night</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Sunset">Sunset</option>
+                    <option value="Night">Night</option>
                 </select>
             </div>
 
