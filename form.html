@@ -30,78 +30,110 @@
             scroll-behavior: smooth;
         }
 
+        .sticky-header { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #f7f9fc, #e3e7ef);
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: left;
+    justify-content: left; /* Centers the content horizontally */
+}
+
+
+        .logo-container {
+            text-align: left;
+            margin-top: 20vh; /* Adjusted margin for vertical centering */
+        }
+
+        .logo-container {
+    text-align: left;
+}
+
+.logo h1 {
+    font-family: 'Montserrat', sans-serif; /* Modern and clean font */
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4a2c82; /* Deep purple with a modern twist */
+    text-transform: uppercase; /* Bold, statement look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Soft shadow for depth */
+    transition: color 0.4s ease, transform 0.4s ease;
+    display: inline-block; /* Inline-block for centering */
+}
+
+
+.logo .accent {
+    font-family: 'Pacifico', cursive; /* Artistic font for elegance */
+    font-size: 2.5rem;
+    color: #b06fc3; /* Light purple for a beautiful contrast */
+    display: block; /* Separate line for emphasis */
+    letter-spacing: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow for a refined look */
+    margin-top: -10px; /* Adjusted spacing between words */
+}
+
+        .wow-de-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.wow-initial-d, .wow-initial-e {
+    position: relative;
+    display: inline-block;
+    font-size: 7rem; /* Extra large for emphasis */
+    font-weight: 700;
+    color: #fcfdff;
+    text-shadow: 
+        0 0 10px #110209,  /* Neon pink glow */
+        0 0 20px #ff4da6, 
+        0 0 30px #f00c0c,
+        0 0 40px rgba(255, 89, 77, 0.7), /* Soft outer glow */
+        0 0 50px rgba(240, 13, 5, 0.959); /* Fading outer glow */
+    transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.wow-initial-d {
+    margin-right: -18px;
+    transform: rotate(-8deg); /* More dramatic rotation */
+    z-index: 2;
+}
+
+.wow-initial-e {
+    margin-left: -8px;
+    transform: rotate(8deg);
+    z-index: 1;
+}
+.wow-initial-d:hover, .wow-initial-e:hover {
+    transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
+    text-shadow: 
+        0 0 15px #13010a, 
+        0 0 30px #f51515, 
+        0 0 45px #5603f0,
+        0 0 60px rgba(245, 82, 6, 0.7), 
+        0 0 75px rgba(235, 11, 4, 0.973); /* Stronger glow on hover */
+}
+.logo h1:hover {
+    color: #361d5e; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight enlargement for emphasis */
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35); /* Stronger shadow on hover */
+}
         .sticky-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to right, #f7f9fc, #e3e7ef);
-            padding: 10px 20px;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-
-        .sticky-header .logo h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.2rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: #4a2c82;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-            transition: color 0.4s ease, transform 0.4s ease;
-        }
-
-        .logo .accent {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.5rem;
-            color: #b06fc3;
-            display: block;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .initial-d, .initial-e {
-            position: relative;
-            display: inline-block;
-            font-size: 5rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            background: linear-gradient(135deg, #8e44ad, #b06fc3);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .initial-d {
-            margin-right: -22px;
-            z-index: 2;
-        }
-
-        .initial-e {
-            margin-left: -8px;
-            z-index: 1;
-        }
-
-        .initial-d:hover, .initial-e:hover {
-            transform: scale(1.1);
-            text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
-        }
-
-        .sticky-header .logo h1:hover {
-            color: #a58ccb;
-            transform: scale(1.05);
-        }
-
-        .logo .accent:hover {
-            color: #c89fd7;
-            transform: translateY(-3px);
-        }
-
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #f9fafb, #eceff4); /* Soft, modern gradient */
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a polished look */
+}
         .banner {
             width: 100%;
             height: 400px;
@@ -370,15 +402,18 @@
 </head>
 <body>
 
-    <!-- Header Section -->
-    <div class="sticky-header">
-        <div class="logo">
-            <h1>
-                <span class="initial-d">D</span><span class="initial-e">E</span>
+        <!-- Modern Header -->
+ <div class="sticky-header">
+    <div class="logo">
+  <div class="wow-de-container">
+          <h1>
+  <span class="wow-initial-d">D</span>
+  <span class="wow-initial-e">E</span>
             Dream Events
             </h1>
         </div>
-    </div>
+        </div>
+        </div>
     
     
 
@@ -432,8 +467,8 @@
                 <input type="text" id="type" name="type" placeholder="Enter your type">
             </div>
             <div class="form-group">
-                <label for="name">Total Invited Peoples</label>
-                <input type="text" id="Total Number Of" name="Invited Poeples" placeholder="Enter Total Number Of Peoples">
+                <label for="name">Total Invited Guest</label>
+                <input type="text" id="Total Number Of Guest" name="Invited Guests" placeholder="Enter Total Number Of Guests">
             </div>
 
 <!-- Food Options with Styled Checkboxes -->
