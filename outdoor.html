@@ -13,8 +13,8 @@
             background-color: #f4f4f4;
         }
 
-/* Sticky header */
-.sticky-header {
+        /* Sticky header */
+        .sticky-header {
             position: sticky;
             top: 0;
             background-color: white;
@@ -22,15 +22,21 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 /* Logo Styling for Dream Events */
-.sticky-header .logo h1 {
+.logo-container {
+    text-align: right; /* Aligns the logo to the left */
+    margin-top: 20vh; /* Keeps the original vertical centering */
+}
+
+.logo h1 {
     font-family: 'Montserrat', sans-serif; /* Modern and clean font */
     font-size: 3.2rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     color: #4a2c82; /* Deep purple with a modern twist */
-    text-transform: uppercase; /* For a bold, statement look */
+    text-transform: uppercase; /* Bold, statement look */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Soft shadow for depth */
     transition: color 0.4s ease, transform 0.4s ease;
+    display: inline-block; /* Inline-block for positioning */
 }
 
 /* Elegant Accent for 'Events' */
@@ -41,50 +47,62 @@
     display: block; /* Separate line for emphasis */
     letter-spacing: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow for a refined look */
+    margin-top: -10px; /* Adjusted spacing between words */
 }
 
-/* Combined DE Styling with Realistic Overlap and Elegance */
-.initial-d, .initial-e {
+/* Neon and 3D Letter Effects */
+.wow-de-container {
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
-    font-size: 5rem; /* Increased size for emphasis */
-    font-family: 'Playfair Display', serif;
+    font-size: 7rem; /* Extra large for emphasis */
     font-weight: 700;
-    background: linear-gradient(135deg, #8e44ad, #b06fc3); /* Elegant gradient */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* Reveal gradient */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35); /* Deeper shadow for realism */
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #fcfdff;
+    text-shadow: 
+        0 0 10px #110209,  
+        0 0 20px #ff4da6, 
+        0 0 30px #f00c0c,
+        0 0 40px rgba(255, 89, 77, 0.7), /* Soft outer glow */
+        0 0 50px rgba(240, 13, 5, 0.959); /* Fading outer glow */
+    transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
-/* Improved Overlap for DE */
-.initial-d {
-    margin-right: -22px; /* Adjusted for a smoother overlap */
-    z-index: 2; /* Brings 'D' to the front for a layered effect */
+.wow-initial-d {
+    margin-right: -18px;
+    transform: rotate(-8deg); /* Dramatic rotation */
+    z-index: 2;
 }
 
-.initial-e {
-    margin-left: -8px; /* Overlap adjustment */
-    z-index: 1; /* 'E' slightly behind */
+.wow-initial-e {
+    margin-left: -8px;
+    transform: rotate(8deg);
+    z-index: 1;
 }
 
-/* Refined Hover Effect */
-.initial-d:hover, .initial-e:hover {
-    transform: scale(1.1); /* More noticeable enlargement */
-    text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+.wow-initial-d:hover, .wow-initial-e:hover {
+    transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
+    text-shadow: 
+        0 0 15px #13010a, 
+        0 0 30px #f51515, 
+        0 0 45px #5603f0,
+        0 0 60px rgba(245, 82, 6, 0.7), 
+        0 0 75px rgba(235, 11, 4, 0.973); /* Stronger glow on hover */
 }
 
-/* Hover Effect */
-.sticky-header .logo h1:hover {
-    color: #a58ccb; /* Slightly lighter color on hover */
-    transform: scale(1.05); /* Gentle hover effect */
+/* Hover Effect for Interaction */
+.logo h1:hover {
+    color: #361d5e; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight enlargement for emphasis */
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35); /* Stronger shadow on hover */
 }
 
-.logo .accent:hover {
-    color: #c89fd7; /* Subtle change on hover */
-    transform: translateY(-3px); /* Upward movement for elegance */
-}
 
 /* Header Background and Positioning */
 .sticky-header {
@@ -273,10 +291,13 @@
  <!-- Modern Header -->
  <div class="sticky-header">
     <div class="logo">
-        <h1>
-            <span class="initial-d">D</span><span class="initial-e">E</span>
-            Dream Events
-            </h1>
+        <div class="wow-de-container">
+            <h1>
+    <span class="wow-initial-d">D</span>
+    <span class="wow-initial-e">E</span>
+              Dream Events
+              </h1>
+          </div>
         </div>
         </div>
   </header>
