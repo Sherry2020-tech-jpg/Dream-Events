@@ -48,15 +48,21 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 /* Logo Styling for Dream Events */
-.sticky-header .logo h1 {
+.logo-container {
+    text-align: right; /* Aligns the logo to the left */
+    margin-top: 20vh; /* Keeps the original vertical centering */
+}
+
+.logo h1 {
     font-family: 'Montserrat', sans-serif; /* Modern and clean font */
     font-size: 3.2rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     color: #4a2c82; /* Deep purple with a modern twist */
-    text-transform: uppercase; /* For a bold, statement look */
+    text-transform: uppercase; /* Bold, statement look */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Soft shadow for depth */
     transition: color 0.4s ease, transform 0.4s ease;
+    display: inline-block; /* Inline-block for positioning */
 }
 
 /* Elegant Accent for 'Events' */
@@ -67,50 +73,62 @@
     display: block; /* Separate line for emphasis */
     letter-spacing: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow for a refined look */
+    margin-top: -10px; /* Adjusted spacing between words */
 }
 
-/* Combined DE Styling with Realistic Overlap and Elegance */
-.initial-d, .initial-e {
+/* Neon and 3D Letter Effects */
+.wow-de-container {
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
-    font-size: 5rem; /* Increased size for emphasis */
-    font-family: 'Playfair Display', serif;
+    font-size: 7rem; /* Extra large for emphasis */
     font-weight: 700;
-    background: linear-gradient(135deg, #8e44ad, #b06fc3); /* Elegant gradient */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* Reveal gradient */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35); /* Deeper shadow for realism */
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #fcfdff;
+    text-shadow: 
+        0 0 10px #110209,  
+        0 0 20px #ff4da6, 
+        0 0 30px #f00c0c,
+        0 0 40px rgba(255, 89, 77, 0.7), /* Soft outer glow */
+        0 0 50px rgba(240, 13, 5, 0.959); /* Fading outer glow */
+    transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
-/* Improved Overlap for DE */
-.initial-d {
-    margin-right: -22px; /* Adjusted for a smoother overlap */
-    z-index: 2; /* Brings 'D' to the front for a layered effect */
+.wow-initial-d {
+    margin-right: -18px;
+    transform: rotate(-8deg); /* Dramatic rotation */
+    z-index: 2;
 }
 
-.initial-e {
-    margin-left: -8px; /* Overlap adjustment */
-    z-index: 1; /* 'E' slightly behind */
+.wow-initial-e {
+    margin-left: -8px;
+    transform: rotate(8deg);
+    z-index: 1;
 }
 
-/* Refined Hover Effect */
-.initial-d:hover, .initial-e:hover {
-    transform: scale(1.1); /* More noticeable enlargement */
-    text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+.wow-initial-d:hover, .wow-initial-e:hover {
+    transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
+    text-shadow: 
+        0 0 15px #13010a, 
+        0 0 30px #f51515, 
+        0 0 45px #5603f0,
+        0 0 60px rgba(245, 82, 6, 0.7), 
+        0 0 75px rgba(235, 11, 4, 0.973); /* Stronger glow on hover */
 }
 
-/* Hover Effect */
-.sticky-header .logo h1:hover {
-    color: #a58ccb; /* Slightly lighter color on hover */
-    transform: scale(1.05); /* Gentle hover effect */
+/* Hover Effect for Interaction */
+.logo h1:hover {
+    color: #361d5e; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight enlargement for emphasis */
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35); /* Stronger shadow on hover */
 }
 
-.logo .accent:hover {
-    color: #c89fd7; /* Subtle change on hover */
-    transform: translateY(-3px); /* Upward movement for elegance */
-}
 
 /* Header Background and Positioning */
 .sticky-header {
@@ -520,10 +538,13 @@
  <!-- Modern Header -->
  <div class="sticky-header">
   <div class="logo">
+    <div class="wow-de-container">
       <h1>
-          <span class="initial-d">D</span><span class="initial-e">E</span>
-          Dream Events
-          </h1>
+<span class="wow-initial-d">D</span>
+<span class="wow-initial-e">E</span>
+        Dream Events
+        </h1>
+    </div>
       </div>
       </div>
 </header>
@@ -591,7 +612,7 @@
                     <div class="photographer-info">
                         <h3>MR.RAHIM:Event Planner & Photographer</h3>
                         <p class="description">Mr.Rahim is a dynamic event planner and seasoned photographer with over seven years of experience in creating and capturing unforgettable moments. His expertise lies in orchestrating seamless events, As a photographer, Abdul combines his artistic vision with a keen sense of timing, ensuring that each photograph encapsulates the emotions and energy of the moment.</p>
-                        <p class="price-tag">PKR 15,000</p>
+                        <p class="price-tag">PKR 20,000</p>
                     </div>
                 </div>
                 <!-- Photographer Card 2 -->
@@ -601,7 +622,7 @@
                         <h3>MR. HAMMAD: Dynamic Photographer</h3>
                         <p class="description">Mr. Hammad is a dynamic event photographer with over six years of experience capturing the essence of live events through his lens. Known for his artistic flair and technical expertise, he specializes in weddings, corporate events, and vibrant celebrations. Hammad's work not only documents moments but also tells compelling stories, transforming each photograph into a cherished memory
                         </p>
-                        <p class="price-tag">PKR 12,000</p>
+                        <p class="price-tag">PKR 21,000</p>
                     </div>
                 </div>
                 <!-- Photographer Card 3 -->
@@ -610,7 +631,7 @@
                     <div class="photographer-info">
                         <h3>MS. SAIRA: Experienced Photographer</h3>
                         <p class="description">Saira, a talented female event photographer with an energy for capturing extraordinary minutes.  With an eye for detail and a talent for narrating, she transforms events into distinctive visual narratives.  From parties to business events.Saira combines creativity and professionalism to make sure every photo captures the special feel of the event.Let Saira bring your events to life through her lens!</p>
-                        <p class="price-tag">PKR 10,000</p>
+                        <p class="price-tag">PKR 23,000</p>
                     </div>
                 </div>
                 <!-- Photographer Card 4 -->
@@ -619,7 +640,7 @@
                     <div class="photographer-info">
                         <h3>MS.HIRA: Experienced Videographer</h3>
                         <p class="description">Ms.Hira is an accomplished event videographer with over five years of experience capturing the essence of live events through her lens. Known for her keen eye for detail and storytelling ability, Hira specializes in intimate events, corporate events, and community gatherings. Her work not only documents moments but also evokes emotions, making each video a cherished keepsake.</p>
-                        <p class="price-tag">PKR 11,000</p>
+                        <p class="price-tag">PKR 22,000</p>
                     </div>
                 </div>
             </div>
