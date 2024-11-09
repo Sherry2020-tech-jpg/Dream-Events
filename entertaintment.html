@@ -267,7 +267,6 @@ section h2 {
     background-color: #0056b3;
 }
 
-/* General Styles for Gallery Section */
 .gallery-section {
     padding: 50px 0;
     background-color: #f9f9f9;
@@ -291,56 +290,76 @@ section h2 {
 .gallery-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .gallery-item {
-    background-color: #fff;
-    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30%;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 32%; /* Ensures three items per row */
+    text-align: center;
+    min-width: 300px;
 }
 
 .gallery-image {
     width: 100%;
-    height: 250px;
+    max-height: 300px; /* Increase height for better clarity */
     object-fit: cover;
-    transition: transform 0.3s ease;
+    image-rendering: auto; /* Ensures the image doesn't become pixelated */
 }
 
-.gallery-item:hover .gallery-image {
-    transform: scale(1.05);
-}
 
-.food-info {
+  .food-info {
     padding: 20px;
-    text-align: center;
 }
 
 .food-info h3 {
-    font-size: 22px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
     color: #333;
-    margin-bottom: 15px;
 }
 
 .food-info p {
-    font-size: 16px;
+    font-size: 1em;
+    margin-bottom: 15px;
     color: #666;
-    margin-bottom: 20px;
+}
+
+.food-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.food-info th, .food-info td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    color: #444;
 }
 
 .price-tag {
-    font-size: 18px;
-    color: #e74c3c;
+    font-size: 1.2em;
     font-weight: bold;
+    color: #0056b3;
+    margin-top: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .gallery-item {
+        width: 48%; /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        width: 100%; /* One item per row on small screens */
+    }
 }
 
 /* General Styles for Entertainment Section */
@@ -595,43 +614,66 @@ section h2 {
     </section>
 
 <!-- Gallery of Foods Section -->
-<section id="gallery" class="gallery-section">
-  <div class="container">
-    <h2>Gallery of Food</h2>
-    <p>Explore stunning foods for your events.</p>
+<section class="gallery-section">
+    <h2>Our Food Gallery</h2>
+    <p>Explore our diverse food options</p>
+    
     <div class="gallery-list">
       <!-- Pakistani Food -->
       <div class="gallery-item">
-        <img src="images\Pakistani food.jpg" alt="Pakistani Food" class="gallery-image" />
+        <img src="images/Pakistani food.jpg" alt="Pakistani Food" class="gallery-image" />
         <div class="food-info">
           <h3>Pakistani Food</h3>
-          <p>Pakistani cuisine popular tasty and spicy dishes include: Biryani, Kabab, and more.</p>
+          <p>Delicious and spicy Pakistani dishes like Biryani, Qorma, and more.</p>
+          <table>
+            <tr><td>Biryani</td><td>PKR 3000 for 5 kg</td></tr>
+            <tr><td>Qorma</td><td>PKR 3500 for 5 kg</td></tr>
+            <tr><td>Chicken Tikka</td><td>PKR 2000 for 25 pieces</td></tr>
+            <tr><td>Chapati</td><td>PKR 10 each (min 50)</td></tr>
+            <tr><td>Sheermal</td><td>PKR 50 each (min 20)</td></tr>
+            <tr><td>Sweets (Mithai)</td><td>PKR 2000 for 2 kg</td></tr>
+          </table>
           <div class="price-tag">Starting Price: PKR 8000</div>
         </div>
       </div>
-
+  
       <!-- Chinese Food -->
       <div class="gallery-item">
-        <img src="images\chinese food.jpg" alt="Chinese Food" class="gallery-image" />
+        <img src="images/chinese food.jpg" alt="Chinese Food" class="gallery-image" />
         <div class="food-info">
           <h3>Chinese Food</h3>
-          <p>Pakistani-Chinese dishes like Chicken Manchuriyan and Chili Chicken are popular. </p>
+          <p>Popular dishes like Fried Rice, Schezwan Chicken, and more.</p>
+          <table>
+            <tr><td>Fried Rice</td><td>PKR 1500 for 4 kg</td></tr>
+            <tr><td>Schezwan Chicken</td><td>PKR 3000 for 3 kg</td></tr>
+            <tr><td>Chicken Manchurian</td><td>PKR 2500 for 3 kg</td></tr>
+            <tr><td>Beef Chili</td><td>PKR 3500 for 3 kg</td></tr>
+            <tr><td>Chilli Vegetables (Dry)</td><td>PKR 2000 for 3 kg</td></tr>
+            <tr><td>Singaporean Rice</td><td>PKR 2500 for 4 kg</td></tr>
+          </table>
           <div class="price-tag">Starting Price: PKR 5000</div>
         </div>
       </div>
-
+  
       <!-- Refreshment and Fast Food -->
       <div class="gallery-item">
-        <img src="images\refreshment and fast food.jpg" alt="Refreshment & Fast Food" class="gallery-image" />
+        <img src="images/refreshment and fast food.jpg" alt="Refreshment & Fast Food" class="gallery-image" />
         <div class="food-info">
           <h3>Refreshment & Fast Food</h3>
-          <p>Quick bites like Rolls, Fries, Chae, and Samosas are perfect for casual events.</p>
+          <p>Quick bites like Sandwiches, Burgers, and Fries for casual events.</p>
+          <table>
+            <tr><td>Sandwiches</td><td>PKR 100 each (min 30)</td></tr>
+            <tr><td>Burgers</td><td>PKR 200 each (min 20)</td></tr>
+            <tr><td>Pizza</td><td>PKR 1000 per large (min 5)</td></tr>
+            <tr><td>Kabab</td><td>PKR 1500 for 50 pieces</td></tr>
+            <tr><td>Kachori</td><td>PKR 1000 for 50 pieces</td></tr>
+            <tr><td>French Fries</td><td>PKR 500 for 2 kg</td></tr>
+          </table>
           <div class="price-tag">Starting Price: PKR 500</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <!-- Entertainment Section -->
 <section id="entertainment" class="entertainment-section">
@@ -692,8 +734,8 @@ section h2 {
           <!-- Entertainment Item 6 -->
           <div class="entertainment-item">
               <div class="entertainment-content">
-                  <img src="images/Comedy.jpg" alt="Stand-up Comedians" class="entertainment-image" />
-                  <h3>Stand-up Comedians</h3>
+                  <img src="images/Comedy.jpg" alt="Comedians" class="entertainment-image" />
+                  <h3>Comedians</h3>
                   <p>Make your guests laugh with our professional stand-up comedians.</p>
                   <span class="price">Price: PKR 8000</span>
               </div>
