@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Reservation - Dream Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sacramento&display=swap" rel="stylesheet">
     <style>
         /* Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -45,65 +46,57 @@
 }
 
 
-        .logo-container {
-            text-align: left;
-            margin-top: 20vh; /* Adjusted margin for vertical centering */
-        }
-
-        .logo-container {
-    text-align: left;
-}
-
+/* Logo Styling */
 .logo h1 {
-    font-family: 'Montserrat', sans-serif; /* Modern and clean font */
-    font-size: 3.2rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #4a2c82; /* Deep purple with a modern twist */
-    text-transform: uppercase; /* Bold, statement look */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* Soft shadow for depth */
+    letter-spacing: 5px;
+    color: #1a0808; /* Deep red color */
+    text-transform: uppercase;
+    text-shadow: 5px 5px 8px rgba(241, 2, 2, 0.966); /* Red glow effect */
     transition: color 0.4s ease, transform 0.4s ease;
-    display: inline-block; /* Inline-block for centering */
+    display: inline-block;
 }
 
-
+/* Accent Styling */
 .logo .accent {
-    font-family: 'Pacifico', cursive; /* Artistic font for elegance */
-    font-size: 2.5rem;
-    color: #b06fc3; /* Light purple for a beautiful contrast */
-    display: block; /* Separate line for emphasis */
-    letter-spacing: normal;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Softer shadow for a refined look */
-    margin-top: -10px; /* Adjusted spacing between words */
+    font-family: 'Sacramento', cursive;
+    font-size: 3.2rem;
+    color: #f39c12; /* Golden yellow */
+    display: block;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    margin-top: -10px;
 }
 
-        .wow-de-container {
+/* Neon and 3D Letter Effects */
+.wow-de-container {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     overflow: hidden;
 }
-
 
 .wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
-    font-size: 7rem; /* Extra large for emphasis */
+    font-size: 7rem;
     font-weight: 700;
-    color: #fcfdff;
+    color: #02050c;
     text-shadow: 
-        0 0 10px #110209,  /* Neon pink glow */
+        0 0 10px #fd0e05,
         0 0 20px #ff4da6, 
         0 0 30px #f00c0c,
-        0 0 40px rgba(255, 89, 77, 0.7), /* Soft outer glow */
-        0 0 50px rgba(240, 13, 5, 0.959); /* Fading outer glow */
+        0 0 40px rgba(255, 89, 77, 0.7),
+        0 0 50px rgba(240, 13, 5, 0.959);
     transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
 .wow-initial-d {
     margin-right: -18px;
-    transform: rotate(-8deg); /* More dramatic rotation */
+    transform: rotate(-8deg); /* Rotation for style */
     z-index: 2;
 }
 
@@ -112,20 +105,24 @@
     transform: rotate(8deg);
     z-index: 1;
 }
+
+/* Hover Effects */
 .wow-initial-d:hover, .wow-initial-e:hover {
-    transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
+    transform: translateY(-10px) rotate(0deg);
     text-shadow: 
-        0 0 15px #13010a, 
-        0 0 30px #f51515, 
+        0 0 15px #13010a,
+        0 0 30px #f51515,
         0 0 45px #5603f0,
-        0 0 60px rgba(245, 82, 6, 0.7), 
-        0 0 75px rgba(235, 11, 4, 0.973); /* Stronger glow on hover */
+        0 0 60px rgba(245, 82, 6, 0.7),
+        0 0 75px rgba(235, 11, 4, 0.973);
 }
+
 .logo h1:hover {
     color: #361d5e; /* Darker purple on hover */
-    transform: scale(1.05); /* Slight enlargement for emphasis */
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35); /* Stronger shadow on hover */
+    transform: scale(1.05);
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35);
 }
+
         .sticky-header {
     position: sticky;
     top: 0;
@@ -402,19 +399,19 @@
 </head>
 <body>
 
-        <!-- Modern Header -->
- <div class="sticky-header">
+<!-- Modern Header -->
+<div class="sticky-header">
     <div class="logo">
-  <div class="wow-de-container">
-          <h1>
-  <span class="wow-initial-d">D</span>
-  <span class="wow-initial-e">E</span>
-            Dream Events
+        <div class="wow-de-container">
+            <h1>
+                <span class="wow-initial-d">D</span>
+                <span class="wow-initial-e">E</span>
+                Dream Events
             </h1>
         </div>
-        </div>
-        </div>
-    
+    </div>
+</div>
+
     
 
     <!-- Banner Section -->
