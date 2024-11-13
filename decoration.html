@@ -23,28 +23,29 @@
             overflow-x: hidden;
         }
 
-        /* Sticky header */
-        .sticky-header {
+               /* Sticky header */
+               .sticky-header {
             position: sticky;
             top: 0;
             background-color: rgb(14, 1, 1);
+            padding: 8px 20px;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 /* Logo Styling for Dream Events */
 .logo-container {
     text-align: left; /* Aligns the logo to the left */
-    margin-top: 20vh; /* Keeps the original vertical centering */
+    margin-top: 8vh;
 }
 
 .logo h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 4.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    letter-spacing: 5px;
-    color: #1a0808; /* Change to a bold red color */
+    letter-spacing: 2px;
+    color: #646060; /* Change to a bold white color */
     text-transform: uppercase;
-    text-shadow: 5px 5px 8px rgba(241, 2, 2, 0.966); /* Adjusted shadow for a red glow effect */
+    text-shadow: 5px 5px 8px rgba(48, 60, 192, 0.966); /* Adjusted shadow for a blue glow effect */
     transition: color 0.4s ease, transform 0.4s ease;
     display: inline-block;
 }
@@ -53,12 +54,12 @@
 /* Elegant Accent for 'Events' */
 .logo .accent {
     font-family: 'Sacramento', cursive; /* Elegant, slightly playful cursive font */
-    font-size: 3.2rem; /* Slightly larger than before for better contrast */
+    font-size: 2.4rem;
     color: #f39c12; /* Bright, golden yellow to complement the pink */
     display: block; /* Separate line for emphasis */
-    letter-spacing: 3px; /* Soft spacing for fluidity */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Soft but noticeable shadow for added depth */
-    margin-top: -10px; /* Adjusted spacing between words */
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 6px rgba(15, 1, 1, 0.945); /* Soft but noticeable shadow for added depth */
+    margin-left: 5px;
 }
 
 
@@ -74,15 +75,15 @@
 .wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
-    font-size: 7rem; /* Extra large for emphasis */
+    font-size: 5.5rem;
     font-weight: 700;
-    color: #02050c;
+    color: #f7f7f8;
     text-shadow: 
-        0 0 10px #fd0e05,  
-        0 0 20px #ff4da6, 
-        0 0 30px #f00c0c,
-        0 0 40px rgba(255, 89, 77, 0.7), /* Soft outer glow */
-        0 0 50px rgba(240, 13, 5, 0.959); /* Fading outer glow */
+        0 0 10px #000000,  
+        0 0 20px #000000, 
+        0 0 30px #000000,
+        0 0 40px rgba(3, 1, 5, 0.932), /* Soft outer glow */
+        0 0 50px rgba(2, 12, 19, 0.959); /* Fading outer glow */
     transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -101,11 +102,11 @@
 .wow-initial-d:hover, .wow-initial-e:hover {
     transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
     text-shadow: 
-        0 0 15px #13010a, 
-        0 0 30px #f51515, 
-        0 0 45px #5603f0,
-        0 0 60px rgba(245, 82, 6, 0.7), 
-        0 0 75px rgba(235, 11, 4, 0.973); /* Stronger glow on hover */
+        0 0 15px #000000, 
+        0 0 30px #000000, 
+        0 0 45px #000000,
+        0 0 60px rgba(2, 1, 3, 0.979), 
+        0 0 75px rgb(2, 6, 14); /* Stronger glow on hover */
 }
 
 /* Hover Effect for Interaction */
@@ -159,10 +160,10 @@
     padding: 20px; /* Card padding */
     width: 30%; /* Card width */
     max-width: 300px; /* Limit the maximum width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgb(12, 3, 3); /* Subtle shadow */
     border-radius: 8px; /* Rounded corners */
     transition: transform 0.3s ease; /* Hover effect */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center-align text for uniform look */
 }
 
 .event-card:hover {
@@ -176,6 +177,42 @@
     object-fit: cover; /* Maintain aspect ratio, fill the container */
     border-radius: 8px; /* Same border radius as card for consistent look */
     border: 3px solid #ddd; /* Border styling similar to "Our Lead Photographer" */
+}
+
+/* Headings and Paragraphs */
+.event-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px; /* Consistent spacing around heading */
+}
+
+.event-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Consistent spacing below description */
+}
+.btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003a8b);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
         
@@ -241,27 +278,27 @@
         </div>
         </div>
   </header>
-
+<!-- Banner -->
 <section class="banner">
     <div class="container">
         <h2>Decorations Gallery</h2>
         <p>Where we change small moments into big memories.</p>
     </div>
 </section>
-
+<!-- Decoration Options -->
 <section id="decoration-options" class="decorations-section">
     <div class="container">
         <h2 style="text-align: center; margin-bottom: 40px;">Decorations</h2>
         <div class="event-cards">
             <div class="event-card" data-aos="fade-up">
                 <img src="images/Indoor.jpg" alt="Indoor Decoration">
-                <h3>Indoor Decoration</h3>
+                <h3><b>Indoor Decoration</b></h3>
                 <p>“Home is where love resides, memories are created, friends always belong, and laughter never ends.Let us bring your dream vision to life indoors.”</p>
                 <a href="indoor.html" class="btn btn-primary">Discover</a>
             </div>
             <div class="event-card" data-aos="fade-up">
                 <img src="images/outdoor.jpg" alt="Outdoor Decoration">
-                <h3>Outdoor Decoration</h3>
+                <h3><b>Outdoor Decoration</b></h3>
                 <p>"Embrace the sun, let the good times roll, nature’s stage, where laughter takes its toll.our team brings your vision to life With personalized themes"</p>
                 <a href="outdoor.html" class="btn btn-primary">Discover</a>
             </div>
