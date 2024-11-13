@@ -46,29 +46,36 @@
 }
 
 
-/* Logo Styling */
+/* Logo Styling for Dream Events */
+.logo-container {
+    text-align: left; /* Aligns the logo to the left */
+    margin-top: 8vh;
+}
+
 .logo h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 4.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    letter-spacing: 5px;
-    color: #1a0808; /* Deep red color */
+    letter-spacing: 2px;
+    color: #646060; /* Change to a bold white color */
     text-transform: uppercase;
-    text-shadow: 5px 5px 8px rgba(241, 2, 2, 0.966); /* Red glow effect */
+    text-shadow: 5px 5px 8px rgba(48, 60, 192, 0.966); /* Adjusted shadow for a blue glow effect */
     transition: color 0.4s ease, transform 0.4s ease;
     display: inline-block;
 }
 
-/* Accent Styling */
+
+/* Elegant Accent for 'Events' */
 .logo .accent {
-    font-family: 'Sacramento', cursive;
-    font-size: 3.2rem;
-    color: #f39c12; /* Golden yellow */
-    display: block;
-    letter-spacing: 3px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
-    margin-top: -10px;
+    font-family: 'Sacramento', cursive; /* Elegant, slightly playful cursive font */
+    font-size: 2.4rem;
+    color: #f39c12; /* Bright, golden yellow to complement the pink */
+    display: block; /* Separate line for emphasis */
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 6px rgba(15, 1, 1, 0.945); /* Soft but noticeable shadow for added depth */
+    margin-left: 5px;
 }
+
 
 /* Neon and 3D Letter Effects */
 .wow-de-container {
@@ -82,21 +89,21 @@
 .wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
-    font-size: 7rem;
+    font-size: 5.5rem;
     font-weight: 700;
-    color: #02050c;
+    color: #f7f7f8;
     text-shadow: 
-        0 0 10px #fd0e05,
-        0 0 20px #ff4da6, 
-        0 0 30px #f00c0c,
-        0 0 40px rgba(255, 89, 77, 0.7),
-        0 0 50px rgba(240, 13, 5, 0.959);
+        0 0 10px #000000,  
+        0 0 20px #000000, 
+        0 0 30px #000000,
+        0 0 40px rgba(3, 1, 5, 0.932), /* Soft outer glow */
+        0 0 50px rgba(2, 12, 19, 0.959); /* Fading outer glow */
     transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
 .wow-initial-d {
     margin-right: -18px;
-    transform: rotate(-8deg); /* Rotation for style */
+    transform: rotate(-8deg); /* Dramatic rotation */
     z-index: 2;
 }
 
@@ -106,21 +113,21 @@
     z-index: 1;
 }
 
-/* Hover Effects */
 .wow-initial-d:hover, .wow-initial-e:hover {
-    transform: translateY(-10px) rotate(0deg);
+    transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
     text-shadow: 
-        0 0 15px #13010a,
-        0 0 30px #f51515,
-        0 0 45px #5603f0,
-        0 0 60px rgba(245, 82, 6, 0.7),
-        0 0 75px rgba(235, 11, 4, 0.973);
+        0 0 15px #000000, 
+        0 0 30px #000000, 
+        0 0 45px #000000,
+        0 0 60px rgba(2, 1, 3, 0.979), 
+        0 0 75px rgb(2, 6, 14); /* Stronger glow on hover */
 }
 
+/* Hover Effect for Interaction */
 .logo h1:hover {
     color: #361d5e; /* Darker purple on hover */
-    transform: scale(1.05);
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35);
+    transform: scale(1.05); /* Slight enlargement for emphasis */
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35); /* Stronger shadow on hover */
 }
 
         .sticky-header {
@@ -281,7 +288,7 @@
             border-color: #007bff;
             background-color: #fff;
             outline: none;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            box-shadow: 0 0 5px rgb(0, 1, 2);
             transition: box-shadow 0.3s ease-in-out;
         }
 
@@ -330,6 +337,7 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2);
         }
+        
 
 /* Subtle name placement */
 .developed-by {
@@ -453,25 +461,52 @@
                 <label for="location">Event Location</label>
                 <input type="text" id="location" name="location" placeholder="Enter your location">
             </div>
-
-            <div class="form-group">
-                <label for="location">Total Area</label>
-                <input type="text" id="Total Area" name="Total Area" placeholder="Enter your Total Area">
-            </div>
-
-            <div class="form-group">
-                <label for="location">Event Type (eg. Birthday)</label>
-                <input type="text" id="type" name="type" placeholder="Enter your type">
-            </div>
+            
             <div class="form-group"> 
                 <label for="location">Event Address (Where will the event be held?)</label>
                 <input type="text" id="location" name="location" placeholder="Enter the address where the event will be held">
-            </div>            
+            </div>
+
+            <div class="form-group">
+                <label for="area">Total Area</label>
+                <div class="row">
+                    <input type="text" id="area" name="area" placeholder="Enter your Total Area">
+                    <select id="area-unit" name="area_unit">
+                        <option value="sqft">Square Feet</option>
+                        <option value="sqm">Square Meters</option>
+                    </select>
+                </div>
+            </div>
+            
+                        
             <div class="form-group">
                 <label for="name">Total Invited Guest</label>
                 <input type="text" id="Total Number Of Guest" name="Invited Guests" placeholder="Enter Total Number Of Guests">
             </div>
 
+<!-- Event Options with Sub-Options -->
+<div class="form-group">
+    <label for="event">Event Options</label>
+    <div id="event-options" class="food-checkboxes">
+        <label>
+            <input type="checkbox" name="event" value="Indoor" onclick="toggleSubOptions('Indoor-options')"> Indoor Events
+        </label>
+        <div id="Indoor-options" class="sub-options">
+            <label><input type="checkbox" name="Indoor Events" value="Intimate Birthday"> Intimate Birthday</label>
+            <label><input type="checkbox" name="Indoor Events" value="Islamic Event"> Islamic Event</label>
+            <label><input type="checkbox" name="Indoor Events" value="Small Gathering"> Small Gathering</label>
+        </div>
+
+        <label>
+            <input type="checkbox" name="event" value="Birthday" onclick="toggleSubOptions('Outdoor-options')"> Outdoor Events
+        </label>
+        <div id="Outdoor-options" class="sub-options">
+            <label><input type="checkbox" name="Outdoor Events" value="Cozy Backyard BBQ Party"> Cozy Backyard BBQ Party</label>
+            <label><input type="checkbox" name="Outdoor Events" value="Luxurious Outdoor Dinner Party"> Luxurious Outdoor Dinner Party</label>
+            <label><input type="checkbox" name="Outdoor Events" value="Mystical Night Under the Stars"> Mystical Night Under the Stars</label>
+        </div>
+    </div>
+</div>
 <!-- Food Options with Styled Checkboxes -->
 <div class="form-group">
     <label for="food">Food Options</label>
@@ -495,9 +530,9 @@
             <label><input type="checkbox" name="chinese-items" value="Fried Rice"> Fried Rice</label>
             <label><input type="checkbox" name="chinese-items" value=" Schezwan Chicken"> Schezwan Chicken</label>
             <label><input type="checkbox" name="chinese-items" value="Manchurian"> Manchurian</label>
-            <label><input type="checkbox" name="pakistani-items" value="Beef Chili"> Beef Chili </label>
-            <label><input type="checkbox" name="pakistani-items" value="Chicken Chilli Vegetables"> Chicken Chilli Vegetables (DRY)</label>
-            <label><input type="checkbox" name="pakistani-items" value="Singaporian Rice"> Singaporian Rice</label>
+            <label><input type="checkbox" name="chinese-items" value="Beef Chili"> Beef Chili </label>
+            <label><input type="checkbox" name="chinese-items" value="Chicken Chilli Vegetables"> Chicken Chilli Vegetables (DRY)</label>
+            <label><input type="checkbox" name="chinese-items" value="Singaporian Rice"> Singaporian Rice</label>
         </div>
 
         <label>
@@ -507,17 +542,9 @@
             <label><input type="checkbox" name="refreshment-items" value="Sandwiches"> Sandwiches</label>
             <label><input type="checkbox" name="refreshment-items" value="Burgers"> Burgers</label>
             <label><input type="checkbox" name="refreshment-items" value="Pizza"> Pizza</label>
-            <label><input type="checkbox" name="pakistani-items" value="Kabab Paratha"> Kabab Paratha</label>
-            <label><input type="checkbox" name="pakistani-items" value="Kachori"> Kachori</label>
-            <label><input type="checkbox" name="pakistani-items" value="French Fries"> French Fries</label>
-        </div>
-
-        <label>
-            <input type="checkbox" name="food" value="Choice" onclick="toggleSubOptions('choice-options')"> Food will be by our choice
-        </label>
-        <div id="choice-options" class="sub-options">
-            <label><input type="checkbox" name="choice-items" value="Chef's Special"> Chef's Special</label>
-            <label><input type="checkbox" name="choice-items" value="Surprise Menu"> Surprise Menu</label>
+            <label><input type="checkbox" name="refreshment-items" value="Kabab Paratha"> Kabab Paratha</label>
+            <label><input type="checkbox" name="refreshment-items" value="Kachori"> Kachori</label>
+            <label><input type="checkbox" name="refreshment-items" value="French Fries"> French Fries</label>
         </div>
     </div>
 </div>
@@ -535,13 +562,13 @@
             <input type="checkbox" name="entertainment" value="Live_music_bands"> Live Music Bands
         </label>
         <label>
-            <input type="checkbox" name="entertainment" value="dancer"> Dancers
+            <input type="checkbox" name="entertainment" value="Naat Khawan"> Naat Khawan
         </label>
         <label>
             <input type="checkbox" name="entertainment" value="Magician"> Magician
         </label>
         <label>
-            <input type="checkbox" name="entertainment" value="Photography"> Photography
+            <input type="checkbox" name="entertainment" value="Singers"> Singers
         </label>
         <label>
             <input type="checkbox" name="entertainment" value="Standup_Comedians"> Standup Comedian
@@ -552,10 +579,10 @@
             <input type="checkbox" name="entertainment" value="Photographer" onclick="toggleSubOptions('photographer-options')"> Photographer
         </label>
         <div id="photographer-options" class="sub-options">
-            <label><input type="checkbox" name="photographer-items" value="Mr. Rahim"> Mr. Rahim</label>
-            <label><input type="checkbox" name="photographer-items" value="Mr. Hammad"> Mr. Hammad</label>
-            <label><input type="checkbox" name="photographer-items" value="Ms. Saira"> Ms. Saira</label>
-            <label><input type="checkbox" name="photographer-items" value="Ms. Hira"> Ms. Hira</label>
+            <label><input type="checkbox" name="photographer-items" value="Mr. Rahim"> MR.RAHIM:Event Planner & Vidoegrapher</label>
+            <label><input type="checkbox" name="photographer-items" value="Mr. Hammad"> MR. HAMMAD: Dynamic Photographer</label>
+            <label><input type="checkbox" name="photographer-items" value="Ms. Saira"> MS. SAIRA: Experienced Photographer</label>
+            <label><input type="checkbox" name="photographer-items" value="Ms. Hira"> MS.HIRA: Experienced Videographer</label>
         </div>
     </div>
 </div>
@@ -576,8 +603,8 @@
             </div>
 
             <div class="form-group"> 
-                <label for="comments">Comments</label>
-                <textarea id="comments" name="comments" placeholder="Enter your comments" rows="4"></textarea>
+                <label for="comments">Suggest Your Ideas</label>
+                <textarea id="Ideas" name="Ideas" placeholder="Enter your Ideas" rows="4"></textarea>
             </div>
             
 
@@ -589,28 +616,24 @@
     <div class="developed-by">
         Developed by Abdul Rahim and Team
     </div>
-<script>
-    // Function to toggle the visibility of sub-options based on selection
-    function toggleSubOptions(id) {
-        const subOptions = document.getElementById(id);
-        subOptions.style.display = subOptions.style.display === 'block' ? 'none' : 'block';
-    }
-
-    // Restrict the number of selected main food options to a maximum of 3
-    document.querySelectorAll('input[name="food"]').forEach(function(checkbox) {
-        checkbox.addEventListener('change', function() {
-            const checkedOptions = document.querySelectorAll('input[name="food"]:checked');
-            if (checkedOptions.length > 3) {
-                this.checked = false;
-                alert("You can select up to 3 food options only.");
-            }
-            function toggleSubOptions(id) {
-        const subOptions = document.getElementById(id);
-        subOptions.style.display = subOptions.style.display === 'block' ? 'none' : 'block';
-    }
+    <script>
+        // Function to toggle the visibility of sub-options based on selection
+        function toggleSubOptions(id) {
+            const subOptions = document.getElementById(id);
+            subOptions.style.display = subOptions.style.display === 'block' ? 'none' : 'block';
+        }
+    
+        // Restrict the number of selected main food options to a maximum of 3
+        document.querySelectorAll('input[name="food"]').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                const checkedOptions = document.querySelectorAll('input[name="food"]:checked');
+                if (checkedOptions.length > 3) {
+                    this.checked = false;
+                    alert("You can select up to 3 food options only.");
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>
