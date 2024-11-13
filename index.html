@@ -37,23 +37,24 @@
             position: sticky;
             top: 0;
             background-color: rgb(14, 1, 1);
+            padding: 8px 20px;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 /* Logo Styling for Dream Events */
 .logo-container {
     text-align: left; /* Aligns the logo to the left */
-    margin-top: 20vh; /* Keeps the original vertical centering */
+    margin-top: 8vh;
 }
 
 .logo h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 4.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    letter-spacing: 5px;
-    color: #1a0808; /* Change to a bold red color */
+    letter-spacing: 2px;
+    color: #646060; /* Change to a bold white color */
     text-transform: uppercase;
-    text-shadow: 5px 5px 8px rgba(241, 2, 2, 0.966); /* Adjusted shadow for a red glow effect */
+    text-shadow: 5px 5px 8px rgba(48, 60, 192, 0.966); /* Adjusted shadow for a blue glow effect */
     transition: color 0.4s ease, transform 0.4s ease;
     display: inline-block;
 }
@@ -62,12 +63,12 @@
 /* Elegant Accent for 'Events' */
 .logo .accent {
     font-family: 'Sacramento', cursive; /* Elegant, slightly playful cursive font */
-    font-size: 3.2rem; /* Slightly larger than before for better contrast */
+    font-size: 2.4rem;
     color: #f39c12; /* Bright, golden yellow to complement the pink */
     display: block; /* Separate line for emphasis */
-    letter-spacing: 3px; /* Soft spacing for fluidity */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Soft but noticeable shadow for added depth */
-    margin-top: -10px; /* Adjusted spacing between words */
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 6px rgba(15, 1, 1, 0.945); /* Soft but noticeable shadow for added depth */
+    margin-left: 5px;
 }
 
 
@@ -83,15 +84,15 @@
 .wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
-    font-size: 7rem; /* Extra large for emphasis */
+    font-size: 5.5rem;
     font-weight: 700;
-    color: #02050c;
+    color: #f7f7f8;
     text-shadow: 
-        0 0 10px #fd0e05,  
-        0 0 20px #ff4da6, 
-        0 0 30px #f00c0c,
-        0 0 40px rgba(255, 89, 77, 0.7), /* Soft outer glow */
-        0 0 50px rgba(240, 13, 5, 0.959); /* Fading outer glow */
+        0 0 10px #000000,  
+        0 0 20px #000000, 
+        0 0 30px #000000,
+        0 0 40px rgba(3, 1, 5, 0.932), /* Soft outer glow */
+        0 0 50px rgba(2, 12, 19, 0.959); /* Fading outer glow */
     transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -110,11 +111,11 @@
 .wow-initial-d:hover, .wow-initial-e:hover {
     transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
     text-shadow: 
-        0 0 15px #13010a, 
-        0 0 30px #f51515, 
-        0 0 45px #5603f0,
-        0 0 60px rgba(245, 82, 6, 0.7), 
-        0 0 75px rgba(235, 11, 4, 0.973); /* Stronger glow on hover */
+        0 0 15px #000000, 
+        0 0 30px #000000, 
+        0 0 45px #000000,
+        0 0 60px rgba(2, 1, 3, 0.979), 
+        0 0 75px rgb(2, 6, 14); /* Stronger glow on hover */
 }
 
 /* Hover Effect for Interaction */
@@ -336,14 +337,15 @@ section h2 {
 }
 
 .welcome-image {
-    max-width: 35%; /* Adjust the image size to fit nicely */
-    margin-left: 20px; /* Moves the image slightly to the right */
+    max-width: 30%; /* Adjust the image size to fit nicely */
+    margin-left: 15px; /* Moves the image slightly to the right */
     border-radius: 8px; /* Adds rounded corners to the image */
 }
 
 .description-box {
     background-color: #f9f9f9; /* Light background color for the box */
     padding: 20px;
+    text-align: justify;
     border-radius: 8px; /* Rounded corners for the box */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     flex: 1; /* Takes remaining space next to the image */
@@ -418,7 +420,7 @@ section h2 {
 .event-card {
     background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Soft gradient for a clean look */
     border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Bolder shadow */
+    box-shadow: 0 8px 24px rgb(19, 3, 3); /* Bolder shadow */
     width: 30%;
     overflow: hidden;
     text-align: center;
@@ -616,7 +618,7 @@ section h2 {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(7, 0, 0, 0.952);
     flex: 1 1 30%; /* Make the cards responsive */
     min-width: 250px; /* Minimum width for each card */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
@@ -669,7 +671,7 @@ section h2 {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgb(7, 2, 22);
 }
 
 .testimonial video {
@@ -725,7 +727,7 @@ blockquote {
     border-radius: 12px;
     padding: 20px;
     width: 280px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 8px 20px rgb(5, 10, 10); /* Soft shadow for depth */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
 }
@@ -939,7 +941,7 @@ footer p {
     <div class="about">
         <img src="images/Welcome.jpeg" alt="Welcome Image" class="welcome-image"> <!-- Replace with your image path -->
         <p class="description-box">
-            Welcome to Dream Events, your own event planning agency. We are here to help transform your simple event into a classy, unforgettable memory. Whether you desire a simple event or the big fat outside event, our creative team will help you transform that. As <strong>indoor Event</strong> planners, we specialize in transforming your simple, precise area into a stunning environment that reflects your style and meets your needs. We also specialize in <strong>outdoor event planning</strong>, where we make unforgettable memories in nature’s most beautiful settings. Whether it's a family gathering, corporate retreat, or any festival, our creative team is here to listen to your ideas and make them a reality. From <strong>venue selection</strong> and <strong>decor</strong> to <strong>catering</strong> and <strong>entertainment</strong>, we ensure a smooth experience for you and your respected guests. Let us take the stress of event planning for you, so you can focus on what really matters—having fun at your event.
+            Welcome to <b>Dream Events</b>, your own event planning agency. We are here to help transform your simple event into a classy, unforgettable memory. Whether you desire a simple event or the big fat outside event, our creative team will help you transform that. As <strong>indoor Event</strong> planners, we specialize in transforming your simple, precise area into a stunning environment that reflects your style and meets your needs. We also specialize in <strong>outdoor event planning</strong>, where we make unforgettable memories in nature’s most beautiful settings. Whether it's a family gathering, corporate retreat, or any festival, our creative team is here to listen to your ideas and make them a reality. From <strong>venue selection</strong> and <strong>decor</strong> to <strong>catering</strong> and <strong>entertainment</strong>, we ensure a smooth experience for you and your respected guests. Let us take the stress of event planning for you, so you can focus on what really matters—having fun at your event.
         </p>
     </div>
 </section>
@@ -1004,9 +1006,9 @@ footer p {
         </div>
     </section>
 <!-- How We Work Section -->
-<section id="how-it-works" class="how-we-works">
+<section id="how-it-work" class="how-we-work">
     <div class="container">
-        <h2 class="section-title">How We Works</h2>
+        <h2 class="section-title"><b>How We Work</b></h2>
         <p class="section-description">We put our heart and soul into every event, creating an energetic environment filled with innovative ideas and creativity.</p>
         <div class="feature-cards">
             <div class="feature-card">
