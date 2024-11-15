@@ -56,12 +56,13 @@
     font-size: 2.8rem;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #646060; /* Change to a bold white color */
+    color: #1E2761; /* Bold color */
     text-transform: uppercase;
-    text-shadow: 5px 5px 8px rgba(48, 60, 192, 0.966); /* Adjusted shadow for a blue glow effect */
+    text-shadow: 5px 5px 8px #7a2048f6; /* Updated shadow color */
     transition: color 0.4s ease, transform 0.4s ease;
     display: inline-block;
 }
+
 
 
 /* Elegant Accent for 'Events' */
@@ -77,26 +78,15 @@
 
 
 /* Neon and 3D Letter Effects */
-.wow-de-container {
-    position: relative;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    overflow: hidden;
-}
-
 .wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
     font-size: 5.5rem;
     font-weight: 700;
-    color: #f7f7f8;
+    color: #fdfdff; /* Main text color */
     text-shadow: 
-        0 0 10px #000000,  
-        0 0 20px #000000, 
-        0 0 30px #000000,
-        0 0 40px rgba(3, 1, 5, 0.932), /* Soft outer glow */
-        0 0 50px rgba(2, 12, 19, 0.959); /* Fading outer glow */
+        0 0 10px #7a2048f6,  
+        0 0 20px #7a2048f6; /* Reduced to two layers of glow */
     transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -115,12 +105,10 @@
 .wow-initial-d:hover, .wow-initial-e:hover {
     transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
     text-shadow: 
-        0 0 15px #000000, 
-        0 0 30px #000000, 
-        0 0 45px #000000,
-        0 0 60px rgba(2, 1, 3, 0.979), 
-        0 0 75px rgb(2, 6, 14); /* Stronger glow on hover */
+        0 0 15px #1E2761, 
+        0 0 30px #1E2761; /* Reduced to two layers of stronger glow */
 }
+
 
 /* Hover Effect for Interaction */
 .logo h1:hover {
@@ -260,7 +248,8 @@
       .description-box {
   padding: 20px;
   border: 2px solid #dcdcdc;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 15px rgba(14, 7, 7, 0.952); /* Dark shadow */
   border-radius: 10px;
   margin-top: 20px;
   font-size: 1.1em;
@@ -573,7 +562,9 @@
     <!-- Banner Section -->
     <section id="home" class="banner">
       <div class="container">
-        <h2>"Capture Moments"</h2>
+      <h2>
+          "Capture Moments"
+        </h2>
         <p>"Capturing your special moments with stunning, professional photography."</p>
       </div>
     </section>
@@ -581,7 +572,9 @@
     <!-- Welcome Section -->
     <section id="about" class="welcome">
       <div class="container">
-        <h2>Welcome to Dream Events Photography</h2>
+        <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+          <b>Welcome to Dream Events Photography</b>
+        </h2>
         <div class="description-box">
         <p>
           <b>Dream Events Photography</b> – Where Every Moment is Captured with Heart!
@@ -595,7 +588,9 @@ Whether it’s candid smiles or beautifully posed portraits, each photo is craft
    <!-- Gallery Section -->
 <section id="gallery" class="gallery-section">
   <div class="container">
-    <h2>Moments Captured</h2>
+    <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+      Moments Captured
+    </h2>
     <p>
       Browse through our past events and see the beautiful moments we’ve created.
     </p>
@@ -627,7 +622,9 @@ Whether it’s candid smiles or beautifully posed portraits, each photo is craft
 <!-- Photographer Section -->
     <section class="photographer-section">
         <div class="container">
-            <h2 class="section-title">Our Lead Photographers</h2>
+          <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+              Our Lead Photographers
+            </h2>
             <div class="photographer-cards">
                 <!-- Photographer Card 1 -->
                 <div class="photographer-card">
