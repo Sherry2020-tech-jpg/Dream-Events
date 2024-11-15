@@ -52,12 +52,13 @@
     font-size: 2.8rem;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #646060; /* Change to a bold white color */
+    color: #1E2761; /* Bold color */
     text-transform: uppercase;
-    text-shadow: 5px 5px 8px rgba(48, 60, 192, 0.966); /* Adjusted shadow for a blue glow effect */
+    text-shadow: 5px 5px 8px #7a2048f6; /* Updated shadow color */
     transition: color 0.4s ease, transform 0.4s ease;
     display: inline-block;
 }
+
 
 
 /* Elegant Accent for 'Events' */
@@ -73,26 +74,15 @@
 
 
 /* Neon and 3D Letter Effects */
-.wow-de-container {
-    position: relative;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    overflow: hidden;
-}
-
 .wow-initial-d, .wow-initial-e {
     position: relative;
     display: inline-block;
     font-size: 5.5rem;
     font-weight: 700;
-    color: #f7f7f8;
+    color: #fdfdff; /* Main text color */
     text-shadow: 
-        0 0 10px #000000,  
-        0 0 20px #000000, 
-        0 0 30px #000000,
-        0 0 40px rgba(3, 1, 5, 0.932), /* Soft outer glow */
-        0 0 50px rgba(2, 12, 19, 0.959); /* Fading outer glow */
+        0 0 10px #7a2048f6,  
+        0 0 20px #7a2048f6; /* Reduced to two layers of glow */
     transition: transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -111,12 +101,10 @@
 .wow-initial-d:hover, .wow-initial-e:hover {
     transform: translateY(-10px) rotate(0deg); /* Float up and straighten */
     text-shadow: 
-        0 0 15px #000000, 
-        0 0 30px #000000, 
-        0 0 45px #000000,
-        0 0 60px rgba(2, 1, 3, 0.979), 
-        0 0 75px rgb(2, 6, 14); /* Stronger glow on hover */
+        0 0 15px #1E2761, 
+        0 0 30px #1E2761; /* Reduced to two layers of stronger glow */
 }
+
 
 /* Hover Effect for Interaction */
 .logo h1:hover {
@@ -141,7 +129,7 @@
 /* Base styles for navigation */
 nav {
     background: linear-gradient(to right, #f7f9fc, #e3e7ef); /* Match header gradient */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    box-shadow: 0 4px 10px rgba(15, 2, 2, 0.918); /* Light shadow for depth */
     padding: 10px 15px; /* Adjusted padding */
     overflow-x: auto; /* Allow horizontal scrolling if needed */
     white-space: nowrap; /* Prevent items from wrapping */
@@ -298,7 +286,6 @@ nav ul li a:hover {
     border-radius: 5px;
     transition: background-color 0.3s ease, opacity 1s ease-in-out;
 }
-
 .cta-btn:hover {
     background-color: #f0f0f0;
 }
@@ -314,8 +301,8 @@ section {
     text-align: center;
     padding: 50px 20px; /* Adjusted padding */
     background: linear-gradient(135deg, #f9f9f9, #e9e9e9);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(14, 7, 7, 0.952); /* Dark shadow */
     transition: all 0.3s ease;
 }
 
@@ -337,17 +324,17 @@ section h2 {
 }
 
 .welcome-image {
-    max-width: 30%; /* Adjust the image size to fit nicely */
-    margin-left: 15px; /* Moves the image slightly to the right */
-    border-radius: 8px; /* Adds rounded corners to the image */
+    max-width: 35%; /* Adjust the image size to fit nicely */
+    margin-left: 20px; /* Moves the image slightly to the right */
+    border-radius: 10px; /* Adds rounded corners to the image */
 }
 
 .description-box {
-    background-color: #f9f9f9; /* Light background color for the box */
-    padding: 20px;
+    background-color: #f4f4f4; /* Light background color for the box */
+    padding: 15px;
     text-align: justify;
-    border-radius: 8px; /* Rounded corners for the box */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 5px; /* Rounded corners for the box */
+    box-shadow: 0 2px 8px rgba(3, 2, 2, 0.952); /* Subtle shadow */
     flex: 1; /* Takes remaining space next to the image */
     color: #666; /* Light grey color for the general text */
     line-height: 1.6; /* Improves text readability */
@@ -617,8 +604,8 @@ section h2 {
 .feature-card {
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(7, 0, 0, 0.952);
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(7, 0, 0, 0.95);
     flex: 1 1 30%; /* Make the cards responsive */
     min-width: 250px; /* Minimum width for each card */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
@@ -649,7 +636,6 @@ section h2 {
     text-align: center;
     background-color: #f9f9f9;
     padding: 50px 0;
-    margin-top: 50px;
 }
 
 #testimonials h2 {
@@ -661,7 +647,7 @@ section h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -689,6 +675,7 @@ blockquote {
     color: #555;
     margin-top: 10px;
 }
+
 
 /* Contact Us Section */
 .contact-section {
@@ -883,7 +870,7 @@ footer p {
  <div class="sticky-header">
   <div class="logo">
 <div class="wow-de-container">
-        <h1>
+    <h1>
 <span class="wow-initial-d">D</span>
 <span class="wow-initial-e">E</span>
           Dream Events
@@ -929,7 +916,7 @@ footer p {
         </div>
         <div class="banner-content">
             <h2>Small Moments, Big Memories</h2>
-            <p>We organize weddings, corporate events, concerts, and more!</p>
+            <p>We organize corporate events, concerts, and more!</p>
         </div>
     </div>
 
@@ -937,7 +924,9 @@ footer p {
 
 <!-- Welcome Section -->
 <section>
-    <h2>Welcome to Our Event Management Service</h2>
+    <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+        Welcome to Our Event Management Service
+        </h2>
     <div class="about">
         <img src="images/Welcome.jpeg" alt="Welcome Image" class="welcome-image"> <!-- Replace with your image path -->
         <p class="description-box">
@@ -952,23 +941,25 @@ footer p {
 <!-- Services Section --> 
 <section id="services">
     <div class="container">
-        <h2>Our Services</h2>
+        <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+            Our Services
+            </h2>
         <div class="event-cards">
             <div class="event-card">
                 <img src="images/image4.jpg" alt="Decorations">
-                <h3>Decorations and Options</h3>
+                <h3><b>Decorations & Options</b></h3>
                 <p class="description">Our stunning decoration services add a luxurious and elegant touch to your events. Every detail is carefully crafted to leave a lasting impression on your guests.</p>
                 <a href="decoration.html" class="btn btn-primary">See More</a>
             </div>
             <div class="event-card">
-                <img src="images/photo.jpg" alt="Photography & Videography">
-                <h3>Photography & Videography</h3>
+                <img src="images/pexels.jpg" alt="Photography & Videography">
+                <h3><b>Photography & Videography</b></h3>
                 <p class="description">Our experienced photographers capture your moments beautifully. Every special moment with our professional team ensures that your memories are preserved in stunning detail, from candid shots to cinematic films.</p>
                 <a href="photography.html" class="btn btn-primary">See More</a>
             </div>
             <div class="event-card">
-                <img src="images/image5.jpg" alt="Entertainment & Catering">
-                <h3>Entertainment & Catering</h3>
+                <img src="images/food.jpg" alt="Entertainment & Catering">
+                <h3><b>Entertainment & Catering</b></h3>
                 <p class="description">Enjoy live performances and delicious catering options. Experience vibrant live entertainment with exquisite catering options, customized to elevate your special event.</p>
                 <a href="entertaintment.html" class="btn btn-primary">See More</a> <!-- Ensure this link is correct -->
             </div>
@@ -976,13 +967,12 @@ footer p {
     </div>
 </section>
 
-
-
-
     <!-- Gallery Section --> 
 <section id="gallery" class="gallery-section">
     <div class="container">
-        <h2>Event Gallery</h2>
+ <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+            Event Gallery
+            </h2>
         <p>Browse through our past events and see the beautiful moments we’ve created.</p>
         <div class="slider">
             <div class="slides">
@@ -990,10 +980,10 @@ footer p {
                     <img src="images/image1.jpg" alt="Event 1">
                 </div>
                 <div class="slide">
-                    <img src="images/stage.jpg" alt="Event 2">
+                    <img src="images/decor.jpg" alt="Event 2">
                 </div>
                 <div class="slide">
-                    <img src="images/photo.jpg" alt="Event 3">
+                    <img src="images/stage.jpg" alt="Event 3">
                 </div>
                 <div class="slide">
                     <img src="images/image5.jpg" alt="Event 4">
@@ -1008,54 +998,56 @@ footer p {
 <!-- How We Work Section -->
 <section id="how-it-work" class="how-we-work">
     <div class="container">
-        <h2 class="section-title"><b>How We Work</b></h2>
+        <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+            <b>How We Work</b>
+            </h2>
         <p class="section-description">We put our heart and soul into every event, creating an energetic environment filled with innovative ideas and creativity.</p>
         <div class="feature-cards">
             <div class="feature-card">
                 <div class="icon">👥</div>
-                <h3>Amazing People</h3>
+                <h3><b>Amazing People</b></h3>
                 <p>Our talented and friendly team ensures that every detail of your event is meticulously arranged.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🏆</div>
-                <h3>Best Experienced</h3>
+                <h3><b>Best Experienced</b></h3>
                 <p>Highly trusted in event management, we pride ourselves on delivering satisfying results to our clients.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">💡</div>
-                <h3>Innovation Oriented</h3>
+                <h3><b>Innovation Oriented</b></h3>
                 <p>Known for our unique approach, we avoid traditional methods and focus on creative setups for your events.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🎨</div>
-                <h3>Different Approach</h3>
+                <h3><b>Different Approach</b></h3>
                 <p>We continually provide fresh ideas to make your events attractive and engaging with the latest techniques.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">👨‍💼</div>
-                <h3>Professional Team</h3>
+                <h3><b>Professional Team</b></h3>
                 <p>Our experienced team is equipped to handle all challenges that may arise during your event.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">✅</div>
-                <h3>Quality Services</h3>
+                <h3><b>Quality Services</b></h3>
                 <p>We offer high-quality, quick, and reliable services at competitive prices in the event management industry.</p>
             </div>
         </div>
     </div>
 </section>
 
-
 <!-- Client Testimonials Section -->
 <section id="testimonials">
-    <h2>What Clients Say</h2>
+    <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+        What Clients Say
+        </h2>
     <div class="testimonial-container">
         <div class="testimonial">
             <video width="400" controls>
                 <source src="videos/video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
-            <p>Client Name 1</p>
+            <p><b>Client Name 1</b></p>
             <blockquote>"This service was fantastic! Highly recommend."</blockquote>
         </div>
         <div class="testimonial">
@@ -1063,7 +1055,7 @@ footer p {
                 <source src="videos/video2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <p>Client Name 2</p>
+            <p><b>Client Name 2</b></p>
             <blockquote>"Great experience, everything was perfectly arranged."</blockquote>
         </div>
         <div class="testimonial">
@@ -1071,7 +1063,7 @@ footer p {
                 <source src="videos/video3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <p>Client Name 3</p>
+            <p><b>Client Name 3</b></p>
             <blockquote>"Amazing event management. Everything was flawless!"</blockquote>
         </div>
     </div>
@@ -1080,7 +1072,9 @@ footer p {
 <!-- Contact Us Section --> 
 <section id="contact" class="contact-section">
     <div class="container text-center">
-        <h2 class="section-title">Let’s Connect!</h2>
+        <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5em; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+            Let’s Connect!
+            </h2>
         <p class="section-subtitle">We’d love to hear from you. Let’s make your event unforgettable!</p>
 
         <div class="contact-info">
@@ -1094,7 +1088,7 @@ footer p {
             </div>
             <div class="info-card">
                 <h3>Location</h3>
-                <p>Makli, Sindh, Pakistan</p>
+                <p><b>Makli, Sindh, Pakistan</b></p>
             </div>
         </div>
     </div>
