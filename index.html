@@ -489,15 +489,13 @@ section h2 {
 .gallery-section h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #333;
 }
 
 .gallery-section p {
     font-size: 18px;
     margin-bottom: 40px;
     max-width: 700px;
-    margin: 0 auto;
-    color: #555;
+    margin: 0 auto 40px auto;
 }
 
 .slider {
@@ -506,95 +504,53 @@ section h2 {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    border-radius: 15px; /* Polished corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sleek shadow */
 }
 
 .slides {
     display: flex;
-    transition: transform 1s ease-in-out;
-    animation: slide 16s infinite ease-in-out;
+    width: 400%;
+    height: 100%;
+    animation: slide 16s infinite;
 }
 
 .slide {
-    min-width: 100%;
-    flex-shrink: 0;
+    width: 100%;
+    transition: 0.5s;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Images fit perfectly */
-    border-radius: 15px; /* Matches slider corners */
+    object-fit: cover;
 }
 
-/* Slide Animation */
+/* Slide animation */
 @keyframes slide {
-    0%, 20% { transform: translateX(0); }
-    25%, 50% { transform: translateX(-100%); }
-    55%, 80% { transform: translateX(-200%); }
-    85%, 100% { transform: translateX(-300%); }
+    0%, 20% { margin-left: 0%; }
+    25%, 50% { margin-left: -100%; }
+    55%, 80% { margin-left: -200%; }
+    85%, 100% { margin-left: -300%; }
 }
 
-/* Hover Zoom Effect for Desktop */
-@media (hover: hover) and (pointer: fine) {
-    .slide img:hover {
-        transform: scale(1.05);
-        transition: transform 0.5s ease;
-    }
-}
-
-/* Responsive Design */
-
-/* Large Screens */
-@media (max-width: 1024px) {
-    .gallery-section h2 {
-        font-size: 28px;
-    }
-    .gallery-section p {
-        font-size: 16px;
-    }
-    .slider {
-        width: 90%;
-        height: 400px;
-    }
-}
-
-/* Tablets */
+/* Media Query for Small Screens */
 @media (max-width: 768px) {
     .gallery-section h2 {
         font-size: 24px;
     }
     .gallery-section p {
-        font-size: 14px;
+        font-size: 16px;
         padding: 0 10px;
     }
     .slider {
-        width: 95%;
-        height: 300px;
+        width: 90%; /* Slightly smaller width for mobile */
+        height: auto; /* Adjust height to fit images */
     }
     .slide img {
-        height: 300px;
-    }
-}
-
-/* Mobile Screens */
-@media (max-width: 480px) {
-    .gallery-section h2 {
-        font-size: 20px;
-    }
-    .gallery-section p {
-        font-size: 14px;
-    }
-    .slider {
         width: 100%;
-        height: 250px;
-    }
-    .slide img {
-        height: 250px;
+        height: auto; /* Maintain image aspect ratio */
+        object-fit: contain; /* Scale image within container */
     }
 }
-
 
 /* Navigation Buttons */
 .prev, .next {
@@ -992,19 +948,19 @@ footer p {
                 <img src="images/image4.jpg" alt="Decorations">
                 <h3><b>Decorations & Options</b></h3>
                 <p class="description">Our stunning decoration services add a luxurious and elegant touch to your events. Every detail is carefully crafted to leave a lasting impression on your guests.</p>
-                <a href="decoration.html" class="cta-btn">Explore Services</a>
+                <a href="decoration.html" class="cta-btn">See More</a>
             </div>
             <div class="event-card">
                 <img src="images/pexels.jpg" alt="Photography & Videography">
                 <h3><b>Photography & Videography</b></h3>
                 <p class="description">Our experienced photographers capture your moments beautifully. Every special moment with our professional team ensures that your memories are preserved in stunning detail, from candid shots to cinematic films.</p>
-                <a href="photography.html" class="cta-btn">Explore Services</a>
+                <a href="photography.html" class="cta-btn">See More</a>
             </div>
             <div class="event-card">
                 <img src="images/food.jpg" alt="Entertainment & Catering">
                 <h3><b>Entertainment & Catering</b></h3>
                 <p class="description">Enjoy live performances and delicious catering options. Experience vibrant live entertainment with exquisite catering options, customized to elevate your special event.</p>
-                <a href="entertaintment.html" class="cta-btn">Explore Services</a>
+                <a href="entertaintment.html" class="cta-btn">See More</a>
             </div>
         </div>
     </div>
